@@ -1,0 +1,55 @@
+.getStartedContainer {
+  width: 80%;
+  margin-top: 65px;
+  margin-bottom: 100px;
+}
+.getStartedHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.getStartedHeader p {
+  color: #212121;
+  font-family: "Poppins-Regular" !important;
+  font-size: 48px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 124% !important;
+}
+.coverCardBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.coverCard {
+  width: 344px;
+  height: 437px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.coverCardImageBox {
+  width: 344px;
+  height: 344px;
+}
+.coverCardImageBox img {
+  width: 100%;
+  height: 100%;
+}
+
+.coverCardFooterText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coverCardFooterText p {
+  color: #212121;
+  font-family: "Poppins-Regular" !important;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: normal !important;
+}

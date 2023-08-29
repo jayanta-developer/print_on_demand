@@ -1,68 +1,42 @@
-/* Slider.css */
-.slider-container {
-  position: relative;
+/* Slideshow */
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 95%;
+  height: 580px;
 }
 
-.slider {
-  display: flex;
-  overflow: hidden;
-  position: relative;
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
 }
 
 .slide {
-  flex: 0 0 100%;
-  height: 300px; /* Adjust the height as needed */
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
-}
-
-.slide.active {
-  transform: translateX(0);
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: 20px;
-}
-
-.prev {
-  left: 20px;
-}
-
-.next {
-  right: 20px;
-}
-
-.dots {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.dot {
+  width: 100%;
+  height: 540px;
   display: inline-block;
-  width: 10px;
+  border-radius: 40px;
+}
+
+/* Buttons */
+
+.slideshowDots {
+  text-align: center;
+}
+
+.slideshowDot {
+  display: inline-block;
   height: 10px;
-  margin: 0 5px;
-  background-color: #bbb;
+  width: 10px;
   border-radius: 50%;
+
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin: 15px 7px 0px;
+
+  background-color: #c4c4c4;
 }
 
-.dot.active {
-  background-color: #717171;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #202020;
+.slideshowDot.active {
+  background-color: #4b596d;
 }

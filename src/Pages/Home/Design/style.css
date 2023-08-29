@@ -1,0 +1,84 @@
+.designContainer {
+  width: 80%;
+  margin-bottom: 100px;
+}
+.designCardBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+.designCard {
+  width: 344px;
+  height: 730px;
+}
+
+.designCardCover {
+  width: 344px;
+  height: 436px;
+  margin-bottom: 30px;
+}
+.designCardCover img {
+  width: 100%;
+  height: 100%;
+}
+.designCardTextBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.designCardHeaderText {
+  color: #212121;
+  text-align: center;
+  font-family: "Poppins-Regular" !important;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: normal !important;
+}
+.designCardSubText {
+  color: #212121;
+  text-align: center;
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+}
+.planBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.planText {
+  color: var(--greyscale-900, #212121);
+  font-family: "Poppins-Regular" !important;
+  font-size: 48px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 124% !important;
+}
+.planBtn {
+  display: flex;
+  height: 50px;
+  padding: 10px 40px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  border-radius: 4px;
+  background: var(--primary-ocher, #b8845f);
+  box-shadow: 4px 8px 12px 0px rgba(133, 84, 50, 0.2);
+}
+.planBtn p {
+  color: var(--primary-white, #fff);
+  text-align: center;
+
+  /* Text/Button default */
+  font-family: "Poppins-Regular" !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+}

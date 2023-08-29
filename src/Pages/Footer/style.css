@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   background: #4b596d;
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
 }
 .footerMainBox {
   display: flex;

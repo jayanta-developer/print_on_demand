@@ -1,10 +1,15 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import "./style.css"
 
 //Components
 import NavBar from '../NavBar';
 import Footer from '../Footer';
 import AutoImageSlider from "../../Components/ImageSlider"
+import GetStarted from './GetStarted';
+import Stories from './Stories';
+import Customize from './Customize';
+import Design from "./Design"
 
 export default function Home() {
   return (
@@ -14,7 +19,10 @@ export default function Home() {
         <Box className="imageSliderBox">
           <AutoImageSlider />
         </Box>
-
+        <GetStarted />
+        <Stories />
+        <Customize />
+        <Design />
       </Box>
       <Footer />
     </>

@@ -1,0 +1,67 @@
+.customizeContainer {
+  width: 80%;
+  height: 498px;
+  margin-bottom: 100px;
+}
+.customizeHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customizeHeader p {
+  color: #212121;
+  /* Text/H2 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 48px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 124% !important;
+}
+.customizeCardBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.customizeCard {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.customizeCardIconBox {
+  width: 32px;
+  height: 32px;
+}
+.customizeCardIconBox img {
+  width: 100%;
+  height: 100%;
+}
+.customizeCardText p {
+  color: #212121;
+  font-family: "Poppins-Regular" !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 140% !important;
+  text-align: center;
+}
+.customizeSummeryBox {
+  width: 100%;
+  height: 186px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../Assets//images/home_hero-background-2-0553526c902680165a963148e1d65aa6c3aa17b5fce77781fad94bd85309dc94\ 1.png);
+  background-size: cover;
+}
+.customizeSummeryBox p {
+  color: #212121;
+  text-align: center;
+  font-family: "Poppins-Regular" !important;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: normal !important;
+}

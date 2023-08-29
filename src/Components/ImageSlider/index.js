@@ -9,62 +9,59 @@ import image5 from "../../Assets/images/Photo gallery/The-best-digital-notebooks
 import image6 from "../../Assets/images/Photo gallery/notebooks-sheets-lined-checkered-and-drawing_csp77476592.jpg";
 import image7 from "../../Assets/images/Photo gallery/photo-1654481414716-2f4ab5fe0fbe.jpeg";
 
-const images = [image1, image2, image3, image4, image5, image6, image7];
+const Images = [image3, image2, image1, image5, image6, image7];
 
-const Slider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+function Slideshow() {
+  const [index, setIndex] = React.useState(0);
+  const timeoutRef = React.useRef(null);
 
-  // Automatic slide change
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000); // Change slide every 5 seconds
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
 
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prevSlide) => (prevSlide - 1 + images.length) % images.length
+  React.useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setIndex((prevIndex) =>
+          prevIndex === Images.length - 1 ? 0 : prevIndex + 1
+        ),
+      2500
     );
-  };
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
+    return () => {
+      resetTimeout();
+    };
+  }, [index]);
 
   return (
-    <div className="slider-container">
-      <div className="slider">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`slide ${index === currentSlide ? "active" : ""}`}
-            style={{ backgroundImage: `url(${image})` }}
-          />
+    <div className="slideshow">
+      <div
+        className="slideshowSlider"
+        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+      >
+        {Images.map((el, index) => (
+          <div className="slide" key={index}>
+            <img style={{ width: "100%", height: "100%" }} src={el} />
+          </div>
         ))}
-        <button className="prev" onClick={prevSlide}>
-          &#10094;
-        </button>
-        <button className="next" onClick={nextSlide}>
-          &#10095;
-        </button>
       </div>
-      <div className="dots">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentSlide ? "active" : ""}`}
-            onClick={() => goToSlide(index)}
-          />
+
+      <div className="slideshowDots">
+        {Images.map((_, idx) => (
+          <div
+            key={idx}
+            className={`slideshowDot${index === idx ? " active" : ""}`}
+            onClick={() => {
+              setIndex(idx);
+            }}
+          ></div>
         ))}
       </div>
     </div>
   );
-};
+}
 
-export default Slider;
+export default Slideshow;
