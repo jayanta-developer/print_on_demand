@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Typography } from '@mui/material';
 import "./style.css"
 
-import CompanyBanner from "../../Assets/images/Headerv2.png"
+import CompanyBanner from "../../Assets/images/BYBnewtag(white).png"
 import PinterestIcon from "../../Assets/images/Pinterest.svg"
 import InstagramIcon from "../../Assets/images/Instagram.svg"
 import LinkedInIcon from "../../Assets/images/LinkedIn.svg"
@@ -17,7 +17,7 @@ export default function Footer() {
         <Box className="footerMainBox">
           <Box className="footerItemBox">
             <Box className="footerItemSubBox">
-              <img src={CompanyBanner} />
+              <img className='companyBanner' src={CompanyBanner} />
             </Box>
             <Box className="footerItemSubBox FooterCompanyIconBox">
               <Box className="FooterCompanyIcon">

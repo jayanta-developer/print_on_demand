@@ -11,7 +11,6 @@ import summeryCover from "../../../Assets/images/home_hero-background-2-0553526c
 
 
 export default function Customize() {
-
   const CustomizeCard = (img, text) => {
     return (
       <Box className="customizeCard">
@@ -25,7 +24,6 @@ export default function Customize() {
       </Box>
     )
   }
-
 
   return (
     <>
@@ -42,9 +40,7 @@ export default function Customize() {
         </Box>
         <Box className="customizeSummeryBox">
           <Typography>… All designed by you, how you like them, just for you. This will<br /> be the last planner you ever need.</Typography>
-
         </Box>
-
       </Box>
     </>
   )

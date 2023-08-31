@@ -1,6 +1,6 @@
 .getStartedContainer {
-  width: 80%;
-  margin-top: 65px;
+  width: 100%;
+  margin-top: 10px;
   margin-bottom: 100px;
 }
 .getStartedHeader {
@@ -13,23 +13,26 @@
 .getStartedHeader p {
   color: #212121;
   font-family: "Poppins-Regular" !important;
-  font-size: 48px !important;
+  font-size: 45px !important;
   font-style: normal;
   font-weight: 700 !important;
   line-height: 124% !important;
+  text-align: center;
 }
 .coverCardBox {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .coverCard {
   width: 344px;
-  height: 437px;
+  height: 385px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .coverCardImageBox {
   width: 344px;
@@ -53,4 +56,35 @@
   font-weight: 600 !important;
   line-height: normal !important;
   text-align: center;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .coverCardBox {
+    width: 100%;
+    justify-content: space-between;
+    overflow: scroll;
+    flex-direction: row;
+  }
+  .coverCard {
+    margin: 0 15px;
+    height: 437px;
+    margin-bottom: 0;
+  }
+  .getStartedHeader p {
+    font-size: 48px !important;
+  }
+  .getStartedContainer {
+    margin-top: 50px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .getStartedContainer {
+    width: 80%;
+  }
+  .coverCardBox {
+    overflow: inherit;
+  }
 }

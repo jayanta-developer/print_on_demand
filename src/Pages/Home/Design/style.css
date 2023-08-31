@@ -1,21 +1,25 @@
 .designContainer {
-  width: 80%;
+  width: 100%;
   margin-bottom: 100px;
 }
 .designCardBox {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 200px;
+  margin-bottom: 30px;
+  overflow: scroll;
+}
+.designCardBox > * {
+  flex: 0 0 100%;
 }
 .designCard {
   width: 344px;
-  height: 730px;
+  height: auto;
 }
 
 .designCardCover {
-  width: 344px;
-  height: 436px;
+  width: 100%;
+  /* height: 436px; */
   margin-bottom: 30px;
 }
 .designCardCover img {
@@ -54,10 +58,11 @@
 .planText {
   color: var(--greyscale-900, #212121);
   font-family: "Poppins-Regular" !important;
-  font-size: 48px !important;
+  font-size: 45px !important;
   font-style: normal;
   font-weight: 700 !important;
   line-height: 124% !important;
+  text-align: center;
 }
 .planBtn {
   display: flex;
@@ -74,11 +79,61 @@
 .planBtn p {
   color: var(--primary-white, #fff);
   text-align: center;
-
   /* Text/Button default */
   font-family: "Poppins-Regular" !important;
   font-size: 18px !important;
   font-style: normal;
   font-weight: 600 !important;
   line-height: 24px !important;
+}
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .designContainer {
+    margin-bottom: 100px;
+  }
+  .designCard {
+    width: 244px;
+    height: auto;
+    margin: 0 15px;
+  }
+  .designCardCover {
+    height: 340px;
+    margin: 0;
+  }
+  .designCardBox {
+    margin-bottom: 45px;
+    overflow: inherit;
+  }
+  .planText {
+    font-size: 48px !important;
+    text-align: center;
+  }
+  .designCard {
+    width: 344px;
+    height: 730px;
+  }
+  .designCardBox > * {
+    flex: 0 0 243px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .designContainer {
+    width: 80%;
+  }
+  .designCard {
+    width: 344px;
+    height: 730px;
+  }
+  .designCardCover {
+    margin-bottom: 30px;
+    height: 436px;
+  }
+  .designCardBox {
+    margin-bottom: 200px;
+  }
+  .designCardBox > * {
+    flex: 0 0 344px;
+  }
 }

@@ -1,5 +1,5 @@
 .customizeContainer {
-  width: 80%;
+  width: 100%;
   height: 498px;
   margin-bottom: 100px;
 }
@@ -13,19 +13,24 @@
   color: #212121;
   /* Text/H2 */
   font-family: "Poppins-Regular" !important;
-  font-size: 48px !important;
+  font-size: 45px !important;
   font-style: normal;
   font-weight: 700 !important;
   line-height: 124% !important;
+  text-align: center;
 }
 .customizeCardBox {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: scroll;
+}
+.customizeCardBox > * {
+  flex: 0 0 200px;
 }
 .customizeCard {
   width: 200px;
-  height: 200px;
+  /* height: 200px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,4 +69,41 @@
   font-style: normal;
   font-weight: 600 !important;
   line-height: normal !important;
+}
+.customizeCardText {
+  padding: 0 9px;
+}
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .customizeCardText p {
+    font-size: 17px !important;
+  }
+  .customizeCardBox {
+    overflow: inherit;
+  }
+  .customizeCard {
+    height: 200px;
+  }
+  .customizeCardBox > * {
+    flex: 0 0 164px;
+  }
+  .customizeHeader p {
+    font-size: 48px !important;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .customizeContainer {
+    width: 80%;
+  }
+  .customizeCardText {
+    padding: 0;
+  }
+  .customizeCardText p {
+    font-size: 18px !important;
+  }
+  .customizeCardBox > * {
+    flex: 0 0 200px;
+  }
 }

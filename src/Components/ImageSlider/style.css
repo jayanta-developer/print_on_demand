@@ -1,10 +1,8 @@
-/* Slideshow */
-
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
-  max-width: 95%;
-  height: 580px;
+  max-width: 100%;
+  height: auto;
 }
 
 .slideshowSlider {
@@ -14,12 +12,10 @@
 
 .slide {
   width: 100%;
-  height: 540px;
+  height: 230px;
   display: inline-block;
   border-radius: 40px;
 }
-
-/* Buttons */
 
 .slideshowDots {
   text-align: center;
@@ -39,4 +35,20 @@
 
 .slideshowDot.active {
   background-color: #4b596d;
+}
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .slideshow {
+    height: 580px;
+  }
+  .slide {
+    height: 540px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .slideshow {
+    max-width: 95%;
+  }
 }

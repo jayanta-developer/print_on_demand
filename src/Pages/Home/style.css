@@ -5,8 +5,24 @@
   align-items: center;
 }
 .imageSliderBox {
-  width: 80%;
-  height: 500px;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .imageSliderBox {
+    margin-top: 27px;
+    height: 500px;
+    margin-bottom: 100px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .imageSliderBox {
+    width: 80%;
+  }
 }
