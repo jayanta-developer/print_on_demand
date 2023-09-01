@@ -132,7 +132,7 @@ hr {
 }
 .emailIcon {
   position: absolute;
-  top: 28px;
+  top: 22px;
   right: 31px;
 }
 .emailInput {
@@ -149,12 +149,12 @@ hr {
 }
 .passwordIcon {
   position: absolute;
-  top: 28px;
+  top: 23px;
   right: 31px;
   cursor: pointer;
 }
 .passwordInput div {
-  height: 71px !important;
+  height: 60px !important;
 }
 .lonIn_crossButton {
   width: 100px;
@@ -208,7 +208,7 @@ hr {
     width: 470px !important;
   }
   .emailInput div {
-    height: 71px !important;
+    height: 60px !important;
   }
   .passwordInput {
     width: 470px !important;
