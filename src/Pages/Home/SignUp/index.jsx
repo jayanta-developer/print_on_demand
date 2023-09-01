@@ -93,12 +93,12 @@ export default function SignUp() {
             <Typography>OR</Typography>
           </Box>
 
-          <Box className="emailInputBox">
+          <Box mb={1} className="emailInputBox">
             <TextField className='emailInput' placeholder='Email' />
             <img className='emailIcon' src={EmailIcon} />
           </Box>
 
-          <Box className="passwordInputBox">
+          <Box mb={1} className="passwordInputBox">
             <TextField className='passwordInput' type={passwordV ? "text" : "password"} placeholder='password' />
             <img onClick={() => setPasswordV(!passwordV)} className='passwordIcon' src={PasswordVisible} />
           </Box>
