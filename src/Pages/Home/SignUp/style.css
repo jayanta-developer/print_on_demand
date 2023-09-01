@@ -24,7 +24,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 40px 64px;
+  padding: 40px 30px;
   position: relative;
 }
 .companyBanner {
@@ -110,7 +110,7 @@ hr {
   align-items: center;
 }
 .CandPtab {
-  width: 230px;
+  width: 180px;
   height: 71px;
   display: flex;
   justify-content: center;
@@ -136,13 +136,13 @@ hr {
   right: 31px;
 }
 .emailInput {
-  width: 370px !important;
+  width: 310px !important;
 }
 .emailInput div {
   height: 71px !important;
 }
 .passwordInput {
-  width: 370px !important;
+  width: 310px !important;
 }
 .passwordInputBox {
   position: relative;
@@ -168,14 +168,14 @@ hr {
 /* signUp */
 .SignUpBox {
   width: 98%;
-  height: 698px;
+  height: 645px;
   flex-shrink: 0;
   border-radius: 24px;
   background: #fff;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 40px 64px;
+  padding: 40px 30px;
   position: relative;
 }
 .SignUpBText1 {
@@ -201,34 +201,29 @@ hr {
     width: 410px;
   }
   .loginBox {
-    width: 758px;
-  }
-  .googleSignUp {
-    width: 622px;
-  }
-  .divider {
-    width: 622px;
+    width: 600px;
+    padding: 40px 64px;
   }
   .emailInput {
-    width: 622px !important;
+    width: 470px !important;
   }
   .emailInput div {
     height: 71px !important;
   }
   .passwordInput {
-    width: 622px !important;
+    width: 470px !important;
   }
-  .singInButton {
-    width: 622px;
-  }
+
   .divider p {
     top: -11px;
-    left: 283px;
+    left: 209px;
   }
 
   /* siginUP */
   .SignUpBox {
-    width: 758px;
+    width: 600px;
+    padding: 40px 64px;
+    height: 698px;
   }
   .SignUpBText1 {
     font-size: 17px !important;

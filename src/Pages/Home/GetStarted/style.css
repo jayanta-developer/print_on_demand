@@ -13,7 +13,7 @@
 .getStartedHeader p {
   color: #212121;
   font-family: "Poppins-Regular" !important;
-  font-size: 45px !important;
+  font-size: 38px !important;
   font-style: normal;
   font-weight: 700 !important;
   line-height: 124% !important;
@@ -72,7 +72,7 @@
     margin-bottom: 0;
   }
   .getStartedHeader p {
-    font-size: 48px !important;
+    font-size: 45px !important;
   }
   .getStartedContainer {
     margin-top: 50px;
