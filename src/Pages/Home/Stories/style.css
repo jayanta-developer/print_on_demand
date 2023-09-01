@@ -1,6 +1,11 @@
 .storiesContainer {
   width: 100%;
   margin-bottom: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .storiesHeader {
   width: 100%;
@@ -18,8 +23,18 @@
   line-height: 124% !important;
 }
 .storiesBox {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  flex-direction: row;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.storiesBox > * {
+  flex: 0 0 100%;
 }
 .storiesCard {
   width: 1073px;
@@ -30,6 +45,7 @@
   justify-content: space-between;
   box-shadow: 0px 4px 60px 0px rgba(4, 6, 15, 0.05);
 }
+
 .coverBox {
   width: 100%;
   height: 100%;
@@ -44,9 +60,11 @@
   flex-direction: column;
   padding: 20px 0;
 }
+
 .comaIcon {
   display: flex;
   justify-content: end;
+  padding-right: 57px;
 }
 .userInfoBox {
   display: flex;
@@ -85,20 +103,46 @@
   font-weight: 500 !important;
   line-height: 22px !important;
 }
+.buttonBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -10px;
+  right: 7px;
+}
+.arrowDisabled {
+  pointer-events: none;
+  /* opacity: 0.5; */
+  cursor: not-allowed;
+}
+.ScrollBtn {
+  display: block;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
 
 /* Tab view*/
 @media only screen and (min-width: 768px) {
   .storiesCard {
+    width: 1073px;
     flex-direction: row;
     height: 484px;
     padding: 44px;
+    /* margin-right: 50px; */
+  }
+  .padding2nd {
+    padding-right: 45;
   }
   .coverBox {
-    width: 439px;
+    width: 504px;
     height: 396px;
+    margin-right: 0px;
   }
   .storiesTextBox {
-    width: 50%;
+    width: 64%;
     padding: 0;
   }
   .userBox {
@@ -110,11 +154,35 @@
   .storiesHeader p {
     font-size: 48px !important;
   }
+  .buttonBox {
+    right: 35px;
+  }
 }
 
 /* Desktop view */
 @media only screen and (min-width: 1000px) {
   .storiesContainer {
     width: 80%;
+  }
+  .buttonBox {
+    right: 230px;
+  }
+  .storiesBox {
+    width: 100%;
+  }
+  .coverBox {
+    width: 602px;
+    height: 396px;
+    margin-right: 53px;
+  }
+  .storiesCard {
+    width: 1073px;
+    flex-direction: row;
+    height: 484px;
+    padding: 44px;
+    /* margin-right: 50px; */
+  }
+  .padding2nd {
+    padding-right: 125px;
   }
 }

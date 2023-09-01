@@ -16,7 +16,7 @@ export default function Footer() {
       <Box className="Footer">
         <Box className="footerMainBox">
           <Box className="footerItemBox">
-            <Box className="footerItemSubBox">
+            <Box className="footerItemSubBox companyLogoBox">
               <img className='companyBanner' src={CompanyBanner} />
             </Box>
             <Box className="footerItemSubBox FooterCompanyIconBox">

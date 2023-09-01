@@ -4,10 +4,10 @@
 }
 .designCardBox {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
-  overflow: scroll;
+  align-items: center;
 }
 .designCardBox > * {
   flex: 0 0 100%;
@@ -103,6 +103,7 @@
   .designCardBox {
     margin-bottom: 45px;
     overflow: inherit;
+    flex-direction: row;
   }
   .planText {
     font-size: 48px !important;

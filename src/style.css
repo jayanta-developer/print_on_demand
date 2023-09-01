@@ -51,7 +51,7 @@ body {
 
 /* Target the scrollbar thumb and track in Mozilla-based browsers (Firefox) */
 ::-moz-scrollbar {
-  width: 5px; /* Width of the scrollbar */
+  width: 10px; /* Width of the scrollbar */
 }
 
 /* Set the color of the scrollbar thumb in Mozilla-based browsers */
