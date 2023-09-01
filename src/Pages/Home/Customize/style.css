@@ -13,7 +13,7 @@
   color: #212121;
   /* Text/H2 */
   font-family: "Poppins-Regular" !important;
-  font-size: 45px !important;
+  font-size: 38px !important;
   font-style: normal;
   font-weight: 700 !important;
   line-height: 124% !important;
@@ -88,7 +88,7 @@
     flex: 0 0 164px;
   }
   .customizeHeader p {
-    font-size: 48px !important;
+    font-size: 45px !important;
   }
 }
 

@@ -58,7 +58,7 @@
 .planText {
   color: var(--greyscale-900, #212121);
   font-family: "Poppins-Regular" !important;
-  font-size: 45px !important;
+  font-size: 38px !important;
   font-style: normal;
   font-weight: 700 !important;
   line-height: 124% !important;
@@ -106,7 +106,7 @@
     flex-direction: row;
   }
   .planText {
-    font-size: 48px !important;
+    font-size: 45px !important;
     text-align: center;
   }
   .designCard {

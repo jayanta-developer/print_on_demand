@@ -17,7 +17,7 @@
 .storiesHeader p {
   color: #212121;
   font-family: "Poppins-Regular" !important;
-  font-size: 45px !important;
+  font-size: 38px !important;
   font-style: normal;
   font-weight: 700 !important;
   line-height: 124% !important;
@@ -152,7 +152,7 @@
     justify-content: end;
   }
   .storiesHeader p {
-    font-size: 48px !important;
+    font-size: 45px !important;
   }
   .buttonBox {
     right: 35px;
