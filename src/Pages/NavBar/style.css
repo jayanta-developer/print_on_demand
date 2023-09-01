@@ -39,8 +39,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 142.857% */
-  color: #fff;
+  color: #ffffff81;
   cursor: pointer;
+}
+.navFont {
+  color: #fff !important;
 }
 .downArrow {
   width: 58px;

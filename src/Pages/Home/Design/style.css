@@ -1,6 +1,5 @@
 .designContainer {
   width: 100%;
-  margin-bottom: 100px;
 }
 .designCardBox {
   display: flex;
@@ -88,9 +87,6 @@
 }
 /* Tab view*/
 @media only screen and (min-width: 768px) {
-  .designContainer {
-    margin-bottom: 100px;
-  }
   .designCard {
     width: 244px;
     height: auto;

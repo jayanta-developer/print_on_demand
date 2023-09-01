@@ -1,0 +1,454 @@
+.coverContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coverNav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background: #4b596d;
+  border-top: 1px solid #fff;
+  margin-bottom: 30px;
+}
+.CnavItem {
+  width: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CnavItem p {
+  /* Text/Button Small */
+  font-family: "Poppins-Regular" !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  cursor: pointer;
+  color: #ffffff81;
+}
+.navFont {
+  color: #fff !important;
+}
+.cover_Box {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  padding: 0 10px;
+}
+
+.priceHoverBox {
+  display: none;
+  width: 309px;
+  height: 214px;
+  flex-direction: column;
+  padding: 30px 40px;
+  background: #fff;
+  position: fixed;
+  bottom: 78px;
+  right: 90px;
+  z-index: 2;
+
+  /* Card/Shadow 2 */
+  box-shadow: 0px 4px 60px 0px rgba(4, 6, 15, 0.05);
+}
+.price_nextBtn {
+  display: flex;
+  padding: 10px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  background: var(--primary-ocher, #b8845f);
+
+  /* Button/Shadow 1 */
+  box-shadow: 4px 8px 12px 0px rgba(133, 84, 50, 0.2);
+}
+.price_nextBtn p {
+  color: var(--primary-white, #fff);
+  text-align: center;
+
+  /* Text/Button default */
+  font-family: "Poppins-Regular" !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+}
+.priceInfo {
+  display: flex;
+  flex-direction: column;
+}
+.priceInfo1Sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.priceInfo1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e4e5e1;
+}
+.priceInfoText {
+  color: var(--primary-ocher, #b8845f);
+
+  /* Text/Button Small */
+  font-family: "Poppins-Regular" !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+}
+.priceInfoBlackText {
+  color: var(--greyscale-900, #212121);
+
+  /* Text/Body 3 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 22px !important;
+}
+.priceInfo2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.priceInfo2PriceText {
+  color: var(--greyscale-900, #212121);
+  /* Text/H4 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 40 !important;
+  line-height: normal;
+}
+
+/* cover box 1 */
+.CoverBox1 {
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.coverOption {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin-bottom: 50px;
+}
+.coverHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coverOptionHeaderText {
+  color: var(--greyscale-900, #212121);
+  text-align: center;
+  font-family: "Poppins-Regular" !important;
+  font-size: 32px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 132% !important;
+  margin-bottom: 15px !important;
+}
+.coverOptionSubText {
+  color: #848383;
+  text-align: center;
+
+  /* Text/Body 3 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 22px !important;
+  margin-bottom: 18px !important;
+}
+.coverOptionItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.coverOptionItem {
+  width: 125px;
+  height: 46px;
+  margin: 5px;
+  display: flex;
+  margin-bottom: 15px !important;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #909090;
+  background: #fff;
+  box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.coverOptionItem:hover {
+  background: #e9e9e9;
+}
+.coverOptionItem p {
+  color: #4d4d4d;
+  text-align: center;
+
+  /* Text/Body 2 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+}
+
+.ChooseFileBox {
+  width: 100%;
+  height: 506px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.1);
+  padding: 17px;
+  margin-top: 20px;
+}
+.chFHeaderText {
+  color: #525151;
+
+  /* Header 2 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+  letter-spacing: -0.4px !important;
+}
+.chFSubText {
+  color: #848383;
+  /* Text/Body 3 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 22px !important;
+}
+.ChFHeaderBox span {
+  color: #0961e7;
+
+  /* Text/Body 3 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 22px !important;
+}
+.chooseCoverRadioBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+  margin-bottom: 10px;
+}
+.chooseCoverCheckBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.chooseCoverCheckBox input {
+  cursor: pointer;
+}
+/* Style the checkbox to change its color */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  background-color: #fff;
+  border-radius: 4px;
+  outline: none;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Style the checkbox when it's checked */
+input[type="checkbox"]:checked {
+  background-color: #6cbdb5;
+  border-color: #6cbdb5;
+}
+
+/* Style the checkmark inside the checkbox */
+input[type="checkbox"]::before {
+  content: "\2713";
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  font-size: 16px;
+  color: white;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  visibility: visible;
+}
+
+.chooseCoverCheckBox p {
+  color: #000;
+  font-family: "Poppins-Regular" !important;
+  font-size: 10px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.fileDropBox {
+  width: 100%;
+  height: 228px;
+  border-radius: 2px;
+  border: 1px solid var(--greyscale-300, #e0e0e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fileDropIcon {
+}
+.fileDropBText {
+  color: var(--greyscale-900, #212121);
+  text-align: center;
+
+  /* Text/H5 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: normal;
+}
+.fileDropSubText {
+  color: var(--greyscale-500, #9e9e9e);
+  text-align: center;
+
+  /* Text/Body 3 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 22px !important;
+}
+.hidden {
+  display: none;
+}
+
+.chooseFileBtn {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  background: var(--primary-ocher, #b8845f);
+  margin-top: 20px;
+  /* Button/Shadow 1 */
+  box-shadow: 4px 8px 12px 0px rgba(133, 84, 50, 0.2);
+  cursor: pointer;
+}
+.chooseFileBtn p {
+  color: var(--primary-white, #fff);
+  text-align: center;
+
+  /* Text/Button default */
+  font-family: "Poppins-Regular" !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+}
+
+/* Choose Cover */
+.ChooseCoverHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.ChooseCoverHeaderText {
+  color: var(--greyscale-900, #212121);
+
+  /* Text/Body 1 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 140% !important;
+}
+.ChooseCoverSubText {
+  color: var(--greyscale-900, #212121);
+
+  /* Text/Body 2 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+}
+.viewCoverBox {
+  /* padding: 40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+}
+.viewCoverBox img {
+  width: 100%;
+  height: 100%;
+}
+
+/* CoverBox2 */
+.CoverBox2 {
+  width: 100%;
+  height: 750px;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .CoverBox1 {
+    flex-direction: row;
+  }
+  .coverOption {
+    width: 419px;
+    margin-bottom: 0;
+  }
+  .ChooseFileBox {
+    width: 419px;
+  }
+  .chooseFileBtn {
+    width: 385px;
+  }
+  .chooseCoverCheckBox p {
+    font-size: 13px !important;
+  }
+  .coverOptionItems {
+    justify-content: space-between;
+  }
+  .priceHoverBox {
+    display: flex;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .cover_Box {
+    width: 1050px;
+    padding: 0;
+  }
+}
