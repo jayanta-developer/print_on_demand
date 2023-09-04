@@ -6,7 +6,8 @@ import { FileDrop } from 'react-file-drop'
 import coverPhoto from "../../Assets/images/CoverPhoto.png";
 import fileDropIcon from "../../Assets/images/cloud_upload.svg"
 import rightArrow from "../../Assets/images/arrow_forward.svg";
-import CoverBook from "../../Assets/images/coverBook.png"
+import CoverBook from "../../Assets/images/coverBook.png";
+import InsideCoverBinder from "../../Assets/images/insideCoverBinder.png"
 
 //Component 
 import NavBar from '../NavBar';
@@ -14,10 +15,16 @@ import Footer from '../Footer';
 
 export default function Cover() {
   const [coverOption, setCoverOption] = useState("Custom");
-  const [tab, setTab] = useState(true)
+  const [tab, setTab] = useState(false)
   const fileInputRef = useRef(null);
   const [checkbox1, setCheckbox1] = useState(false);
   const [checkbox2, setCheckbox2] = useState(false);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
 
 
   const handleCheckbox1Change = () => {
@@ -390,8 +397,43 @@ export default function Cover() {
 
               <Box className="step2InputBox">
                 <Box className="step2InputHeaderBox">
-                  <Typography className='step2InputHeader'></Typography>
-                  <Typography className='step2InputHeader'></Typography>
+                  <Typography className='step2InputHeader'>Fill in the boxes to see what your first page will look like</Typography>
+                  <Typography className='step2InputSubHeader'>This will be the first page of your planner and can include your name, email, phone number and a message.</Typography>
+                </Box>
+
+                <Box className="step2InputFieldBox">
+                  <Box mb={2.3} className="st2InputBox">
+                    <input type="text" className='st2FullName' placeholder='Full Name' onChange={(e) => setName(e.target.value)} />
+                  </Box>
+                  <Box className="st2SecondInputBox">
+                    <Box sx={{ width: "48%" }} className="st2InputBox">
+                      <input type="text" className='st2email' placeholder='Email (Optional)' onChange={(e) => setEmail(e.target.value)} />
+                    </Box>
+                    <Box mb={2} sx={{ width: "48%" }} className="st2InputBox">
+                      <input type="text" className='st2Phone' placeholder='Phone (Optional)' onChange={(e) => setPhone(e.target.value)} />
+                    </Box>
+                  </Box>
+
+                  <Box mb={2} className="st2InputBox">
+                    <textarea type="text" className='st2Message' placeholder='Quote or Personal Message (Optional)' onChange={(e) => setMessage(e.target.value)} />
+                  </Box>
+                  <Box className="st2InputBtn">
+                    <Typography>Save</Typography>
+                  </Box>
+                </Box>
+              </Box>
+
+              <Box className="st2InsideCoverBox">
+                <img className='InsideCoverBinder' src={InsideCoverBinder} />
+                <Box mr={0.5} className="st2InsidePage st2Page"></Box>
+                <Box ml={0.5} className="st2InsidePage">
+                  <Box className="st2InsideCoverTextBox">
+                    <Typography mb={2} className='date'>2023 - 2024</Typography>
+                    <Typography mb={1} className='nameText'>{name.toUpperCase() || "TOMMY SHALLENBERGER"}</Typography>
+                    <Typography mb={1} className='contactText'>{email || "email@gmail.com"}</Typography>
+                    <Typography mb={1} className='contactText'>{phone || "Phone Number"}</Typography>
+                    <Typography mb={1} className='messageText'>{message || "Quote or Personal Message"}</Typography>
+                  </Box>
                 </Box>
               </Box>
 
