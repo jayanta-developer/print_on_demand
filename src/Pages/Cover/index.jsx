@@ -15,7 +15,7 @@ import Footer from '../Footer';
 
 export default function Cover() {
   const [coverOption, setCoverOption] = useState("Custom");
-  const [tab, setTab] = useState(false)
+  const [tab, setTab] = useState(true)
   const fileInputRef = useRef(null);
   const [checkbox1, setCheckbox1] = useState(false);
   const [checkbox2, setCheckbox2] = useState(false);
