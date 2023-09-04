@@ -380,7 +380,23 @@ export default function Cover() {
           </Box>
 
           {/* CoverBox2 */}
-          <Box sx={{ display: tab ? "none" : "block" }} className="CoverBox2"></Box>
+          <Box sx={{ display: tab ? "none" : "block" }} className="CoverBox2">
+            <Box className="ChooseCoverHeader">
+              <Typography mr={1} className='ChooseCoverHeaderText'>Step 2:</Typography>
+              <Typography className='ChooseCoverSubText'>Create your first page (fill in the below text fields)</Typography>
+            </Box>
+
+            <Box className="step2Container">
+
+              <Box className="step2InputBox">
+                <Box className="step2InputHeaderBox">
+                  <Typography className='step2InputHeader'></Typography>
+                  <Typography className='step2InputHeader'></Typography>
+                </Box>
+              </Box>
+
+            </Box>
+          </Box>
 
           <Box className="priceHoverBox">
             <Box className="priceInfo">
