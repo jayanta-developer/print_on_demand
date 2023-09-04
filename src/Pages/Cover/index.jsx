@@ -5,13 +5,13 @@ import { FileDrop } from 'react-file-drop'
 
 import coverPhoto from "../../Assets/images/CoverPhoto.png";
 import fileDropIcon from "../../Assets/images/cloud_upload.svg"
-import rightArrow from "../../Assets/images/arrow_forward.svg";
 import CoverBook from "../../Assets/images/coverBook.png";
 import InsideCoverBinder from "../../Assets/images/insideCoverBinder.png"
 
 //Component 
 import NavBar from '../NavBar';
 import Footer from '../Footer';
+import PriceBox from '../../Components/PriceBox';
 
 export default function Cover() {
   const [coverOption, setCoverOption] = useState("Custom");
@@ -439,35 +439,8 @@ export default function Cover() {
 
             </Box>
           </Box>
-
-          <Box className="priceHoverBox">
-            <Box className="priceInfo">
-              <Box className="priceInfo1">
-                <Box className="priceInfo1Sub">
-                  <Typography className='priceInfoText'>Page Count</Typography>
-                  <Typography className='priceInfoBlackText'>60/242</Typography>
-                </Box>
-                <Box className="priceInfo1Sub">
-                  <Typography className='priceInfoText'>Max End Date</Typography>
-                  <Typography className='priceInfoBlackText'>31 Dec 23</Typography>
-                </Box>
-              </Box>
-
-              <Box className="priceInfo2">
-                <Typography className='priceInfoText'>Price</Typography>
-                <Typography className='priceInfo2PriceText'>$70.00</Typography>
-
-              </Box>
-            </Box>
-            <Box onClick={() => setTab(false)} className="price_nextBtn pointer">
-              <Typography mr={0.5}>Next</Typography>
-              <img src={rightArrow} />
-            </Box>
-          </Box>
-
+          {<PriceBox />}
         </Box>
-
-
       </Box >
       <Footer />
     </>

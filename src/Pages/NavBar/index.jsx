@@ -7,17 +7,11 @@ import "./style.css"
 import NavHeaderImg from "../../Assets/images/BYBnewtag(white).png"
 import navScrollBtn from "../../Assets/images/scroll-svgrepo-com.svg"
 
-
-
 export default function NavBar() {
   const navigate = useNavigate();
   const [mobileNav, setMobileNav] = useState(false)
-
   const location = useLocation();
   const url = location.pathname;
-  console.log(url);
-
-
 
   return (
     <>
@@ -37,7 +31,7 @@ export default function NavBar() {
             <Typography className={url === "/cover" ? "navFont" : null} onClick={() => navigate("/cover")}>Cover</Typography>
           </Box>
           <Box className="navItem">
-            <Typography>Layout</Typography>
+            <Typography className={url === "/layout" ? "navFont" : null} onClick={() => navigate("/layout")}>Layout</Typography>
           </Box>
           <Box className="navItem">
             <Typography>Add-ins</Typography>
