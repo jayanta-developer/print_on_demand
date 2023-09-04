@@ -5,13 +5,15 @@ import { FileDrop } from 'react-file-drop'
 
 import coverPhoto from "../../Assets/images/CoverPhoto.png";
 import fileDropIcon from "../../Assets/images/cloud_upload.svg"
-import rightArrow from "../../Assets/images/arrow_forward.svg"
+import rightArrow from "../../Assets/images/arrow_forward.svg";
+import CoverBook from "../../Assets/images/coverBook.png"
 
 //Component 
 import NavBar from '../NavBar';
 import Footer from '../Footer';
 
 export default function Cover() {
+  const [coverOption, setCoverOption] = useState("Custom");
   const [tab, setTab] = useState(true)
   const fileInputRef = useRef(null);
   const [checkbox1, setCheckbox1] = useState(false);
@@ -59,74 +61,308 @@ export default function Cover() {
                 <Typography className='coverOptionSubText'>To pick your pattern, select a category and explore....</Typography>
               </Box>
               <Box className="coverOptionItems">
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Nature")} sx={{ background: coverOption === "Nature" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Nature</Typography>
                 </Box>
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Animals")} sx={{ background: coverOption === "Animals" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Animals</Typography>
                 </Box>
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Sports")} sx={{ background: coverOption === "Sports" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Sports</Typography>
                 </Box>
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Floral")} sx={{ background: coverOption === "Floral" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Floral</Typography>
                 </Box>
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Art")} sx={{ background: coverOption === "Art" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Art</Typography>
                 </Box>
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Colors")} sx={{ background: coverOption === "Colors" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Colors</Typography>
                 </Box>
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Favorites")} sx={{ background: coverOption === "Favorites" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Favorites</Typography>
                 </Box>
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Patterns")} sx={{ background: coverOption === "Patterns" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Patterns</Typography>
                 </Box>
-                <Box className="coverOptionItem">
+                <Box onClick={() => setCoverOption("Custom")} sx={{ background: coverOption === "Custom" ? "#e9e9e9" : "#fff" }} className="coverOptionItem">
                   <Typography>Custom</Typography>
                 </Box>
               </Box>
 
 
               <Box className="ChooseFileBox">
-                <Box className="ChFHeaderBox">
-                  <Typography className='chFHeaderText'>Custom Upload</Typography>
-                  <Typography className='chFSubText'>Want to upload a corporate or group cover? Please email <span>support@becomingyourbest.com</span> to coordinate print dimensions and proofs.</Typography>
-                </Box>
-                <Box className="chooseCoverRadioBox">
-                  <Box className="FontCoverBox chooseCoverCheckBox">
-                    <input id="myCheckbox" type="checkBox"
-                      checked={checkbox1}
-                      onChange={handleCheckbox1Change}
-                    />
-                    <Typography ml={2}>upload a front cover</Typography>
-                  </Box>
-                  <Box className="BackCoverBox chooseCoverCheckBox">
-                    <input id="myCheckbox" type="checkBox"
-                      checked={checkbox2}
-                      onChange={handleCheckbox2Change}
-                    />
-                    <Typography ml={2}>upload a BACK cover</Typography>
-                  </Box>
-                </Box>
-                <Box onTargetClick={onTargetClick} className="fileDropBox">
-                  <input
-                    onChange={onFileInputChange}
-                    ref={fileInputRef}
-                    type="file"
-                    className="hidden"
-                  />
 
-                  <img onClick={() => fileInputRef.current.click()} className='fileDropIcon' src={fileDropIcon} />
-                  <Typography onClick={() => fileInputRef.current.click()} className='fileDropBText'>Drag & Drop</Typography>
-                  <Typography onClick={() => fileInputRef.current.click()} className='fileDropSubText'>File that contains your events to start uploading...</Typography>
+                <Box sx={{ display: coverOption === "Nature" ? "flex" : "none" }} className="NatureBox">
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                </Box>
+
+
+                <Box sx={{ display: coverOption === "Animals" ? "flex" : "none" }} className="NatureBox">
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
 
                 </Box>
-                <Box onClick={() => fileInputRef.current.click()} className="chooseFileBtn">
-                  <Typography>Choose a file</Typography>
+
+
+                <Box sx={{ display: coverOption === "Sports" ? "flex" : "none" }} className="NatureBox">
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                </Box>
+
+
+                <Box sx={{ display: coverOption === "Floral" ? "flex" : "none" }} className="NatureBox">
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+
+
+                </Box>
+
+
+                <Box sx={{ display: coverOption === "Art" ? "flex" : "none" }} className="NatureBox">
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                </Box>
+
+
+                <Box sx={{ display: coverOption === "Colors" ? "flex" : "none" }} className="NatureBox">
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                </Box>
+
+
+                <Box sx={{ display: coverOption === "Favorites" ? "flex" : "none" }} className="NatureBox">
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                </Box>
+
+                <Box sx={{ display: coverOption === "Patterns" ? "flex" : "none" }} className="NatureBox">
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                  <Box className="natureCoverItem">
+                    <img src={CoverBook} />
+                  </Box>
+                </Box>
+
+
+                <Box sx={{ display: coverOption === "Custom" ? "block" : "none" }} className="customBox">
+                  <Box className="ChFHeaderBox">
+                    <Typography className='chFHeaderText'>Custom Upload</Typography>
+                    <Typography className='chFSubText'>Want to upload a corporate or group cover? Please email <span>support@becomingyourbest.com</span> to coordinate print dimensions and proofs.</Typography>
+                  </Box>
+                  <Box className="chooseCoverRadioBox">
+                    <Box className="FontCoverBox chooseCoverCheckBox">
+                      <input id="myCheckbox" type="checkBox"
+                        checked={checkbox1}
+                        onChange={handleCheckbox1Change}
+                      />
+                      <Typography ml={2}>upload a front cover</Typography>
+                    </Box>
+                    <Box className="BackCoverBox chooseCoverCheckBox">
+                      <input id="myCheckbox" type="checkBox"
+                        checked={checkbox2}
+                        onChange={handleCheckbox2Change}
+                      />
+                      <Typography ml={2}>upload a BACK cover</Typography>
+                    </Box>
+                  </Box>
+                  <Box onTargetClick={onTargetClick} className="fileDropBox">
+                    <input
+                      onChange={onFileInputChange}
+                      ref={fileInputRef}
+                      type="file"
+                      className="hidden"
+                    />
+
+                    <img onClick={() => fileInputRef.current.click()} className='fileDropIcon' src={fileDropIcon} />
+                    <Typography onClick={() => fileInputRef.current.click()} className='fileDropBText'>Drag & Drop</Typography>
+                    <Typography onClick={() => fileInputRef.current.click()} className='fileDropSubText'>File that contains your events to start uploading...</Typography>
+
+                  </Box>
+                  <Box onClick={() => fileInputRef.current.click()} className="chooseFileBtn">
+                    <Typography>Choose a file</Typography>
+                  </Box>
                 </Box>
               </Box>
+
+
             </Box>
             <Box className="chooseCover">
               <Box className="ChooseCoverHeader">
