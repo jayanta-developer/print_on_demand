@@ -3,15 +3,16 @@
 }
 .layOutContainerBox {
   width: 100%;
+  padding: 0 10px;
 }
 
 /* Daily Single Page */
 .DailySinglePage {
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 .sideCustomBox {
-  width: 419px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,10 +27,27 @@
   justify-content: space-between;
   align-items: center;
 }
+.BoxHeaderText {
+  color: var(--greyscale-900, #212121);
+  font-family: "Poppins-Regular" !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  padding-left: 16px !important;
+}
+.choseOneSubText {
+  color: #000;
+  font-family: "Poppins-Regular" !important;
+  font-size: 13px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 140% !important;
+}
 .timeBoxItem {
   width: 126px;
   height: 104px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid var(--greyscale-800, #424242);
   display: flex;
   justify-content: center;
@@ -61,7 +79,34 @@
   border: 1px solid #909090;
   background: #fff;
   display: flex;
+  position: relative;
   align-items: center;
+  cursor: pointer;
+}
+.customPopUpList {
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.customPopUpListItem {
+  height: 30px;
+  border: 1px solid gray;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.customPopUpListItem:hover {
+  background: #c9c9c9;
 }
 .customOption p {
   color: #7c7c7c;
@@ -71,8 +116,226 @@
   font-weight: 400 !important;
   line-height: 132% !important;
 }
-.downArrow {
+.customOptionDownArrow {
   position: absolute;
-  top: 0px;
-  right: 0;
+  top: 16px;
+  right: 17px;
+  cursor: pointer;
+}
+
+.setTimeBox {
+  width: 100%;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid #909090;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.setTimeInsideBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.setTimeInRadioBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.setTimeInRadioBox p {
+  color: var(--greyscale-900, #212121);
+  text-align: justify;
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+  display: flex;
+  align-items: center;
+}
+.weekBox {
+  width: 100%;
+  height: 167px;
+  border-radius: 4px;
+  border: 1px solid #909090;
+  background: #fff;
+  padding: 21px 20px 20px 0px;
+}
+.weekRadioBox {
+  display: flex;
+  flex-direction: row;
+}
+.weekRadioBox p {
+  color: var(--greyscale-900, #212121);
+  text-align: justify;
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+  display: flex;
+  align-items: center;
+}
+.TaskListBox {
+  width: 100%;
+  height: 259px;
+  padding: 21px 20px 20px 0px;
+  border-radius: 4px;
+  border: 1px solid #909090;
+  background: #fff;
+}
+.taskRadioBox {
+  display: flex;
+  flex-direction: column;
+}
+.customPageBottomBox {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  border: 1px solid #909090;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  padding: 21px 20px 20px 0px;
+  box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.12);
+}
+.customPageBottomRCloseBox {
+  height: 57px;
+}
+.customPageBottomLCloseBox {
+  height: 57px;
+}
+
+.customPageBoxHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.customRadioBox {
+  display: flex;
+  flex-direction: column;
+}
+.customRadioInputBox {
+  display: flex;
+  flex-direction: row;
+}
+.customRadioInputBoxInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.customRadioInputBoxInput input {
+  width: 70%;
+  height: 40px;
+  padding-left: 16px;
+  border-radius: 2px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+}
+.customRadioInputBoxInput input:focus {
+  outline: none;
+}
+.customRadioInputBox p {
+  display: flex;
+  align-items: center;
+}
+.titleSaveButton {
+  width: 82px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 0px 2px 2px 0px;
+  background: #b8845f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.titleSaveButton:hover {
+  background: #9c7050;
+}
+.titleSaveButton p {
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins-Regular" !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 22px !important;
+}
+
+/* customPreviewBox */
+.customPreviewBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 15px; */
+  margin-top: 25px;
+}
+.st3CoverBox {
+  display: flex;
+  flex-direction: row;
+}
+.st3page {
+  width: 50%;
+  position: relative;
+  border-radius: 10.289px;
+  background: #fff;
+  padding: 0 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.st3page img {
+  width: 100%;
+  height: 100%;
+}
+.insideCover_binder {
+  width: 21% !important;
+  position: absolute;
+  top: 0;
+  left: -13%;
+}
+.leftCustomArrow {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  cursor: pointer;
+}
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .sideCustomBox {
+    width: 310px;
+    margin-right: 15px;
+  }
+  .customPageBottomRCloseBox {
+    height: 80px;
+  }
+  .customPageBottomLCloseBox {
+    height: 80px;
+  }
+  .DailySinglePage {
+    flex-direction: row;
+  }
+  .customPreviewBox {
+    width: 60%;
+    margin-left: 15px;
+    margin-top: 0;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .layOutContainerBox {
+    width: 100%;
+    padding: 0;
+  }
+  .sideCustomBox {
+    width: 419px;
+  }
+  .customPageBottomRCloseBox {
+    height: 57px;
+  }
+  .customPageBottomLCloseBox {
+    height: 57px;
+  }
 }
