@@ -24,7 +24,7 @@
 .CnavItem p {
   /* Text/Button Small */
   font-family: "Poppins-Regular" !important;
-  font-size: 14px !important;
+  font-size: 9px !important;
   font-style: normal !important;
   font-weight: 400 !important;
   line-height: 20px !important;
@@ -682,6 +682,9 @@ input[type="checkbox"]:checked::before {
   .st2InsideCoverBox {
     width: 700px;
     margin-left: 15px;
+  }
+  .CnavItem p {
+    font-size: 14px !important;
   }
 }
 
