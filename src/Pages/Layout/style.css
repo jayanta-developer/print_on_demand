@@ -13,7 +13,6 @@
 }
 .sideCustomBox {
   width: 100%;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -35,8 +34,10 @@
   font-weight: 600 !important;
   line-height: 24px !important;
   padding-left: 16px !important;
+  cursor: pointer;
 }
 .choseOneSubText {
+  display: none;
   color: #000;
   font-family: "Poppins-Regular" !important;
   font-size: 13px !important;
@@ -45,31 +46,41 @@
   line-height: 140% !important;
 }
 .timeBoxItem {
-  width: 126px;
-  height: 104px;
+  width: 94px;
+  height: 80px;
   border-radius: 4px;
-  border: 1px solid var(--greyscale-800, #424242);
+  border: 2px solid var(--greyscale-800, #9e9e9e);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10px;
+  padding-top: 10px;
+  cursor: pointer;
 }
 .timeSBox {
   width: 18px;
   height: 14px;
   margin-bottom: 10px;
-  border: 2px solid;
+  border: 2px solid #9e9e9e;
   border-radius: 2px;
 }
 .timeBoxItem p {
-  color: var(--greyscale-900, #212121);
+  color: var(--greyscale-900, #9e9e9e);
   text-align: center;
   font-family: "Poppins-Regular" !important;
-  font-size: 16px !important;
+  font-size: 12px !important;
   font-style: normal;
   font-weight: 500 !important;
   line-height: 150% !important;
+}
+.timeBoxItemActive {
+  border: 2px solid var(--greyscale-800, black) !important;
+}
+.timeBoxItemActive p {
+  color: var(--greyscale-900, black);
+}
+.timeSBoxActive {
+  border: 2px solid black !important;
 }
 .customOption {
   width: 100%;
@@ -97,12 +108,14 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .customPopUpListItem {
-  height: 30px;
+  height: 34px;
   border: 1px solid gray;
   width: 100%;
-  text-align: center;
   border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: background 0.5s;
 }
 .customPopUpListItem:hover {
@@ -178,7 +191,7 @@
 }
 .TaskListBox {
   width: 100%;
-  height: 259px;
+  height: auto;
   padding: 21px 20px 20px 0px;
   border-radius: 4px;
   border: 1px solid #909090;
@@ -218,12 +231,17 @@
 .customRadioInputBox {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+.customRadioInputBox svg {
+  cursor: pointer;
 }
 .customRadioInputBoxInput {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-left: 12px;
 }
 .customRadioInputBoxInput input {
   width: 70%;
@@ -307,12 +325,6 @@
     width: 310px;
     margin-right: 15px;
   }
-  .customPageBottomRCloseBox {
-    height: 80px;
-  }
-  .customPageBottomLCloseBox {
-    height: 80px;
-  }
   .DailySinglePage {
     flex-direction: row;
   }
@@ -337,5 +349,21 @@
   }
   .customPageBottomLCloseBox {
     height: 57px;
+  }
+  .timeBoxItem {
+    width: 126px;
+    height: 104px;
+  }
+  .timeBoxItem p {
+    font-size: 16px !important;
+  }
+  .choseOneSubText {
+    display: block;
+  }
+  .customPageBottomBox {
+    padding: 7px 20px 20px 0px;
+  }
+  .leftCustomArrow {
+    top: 23px;
   }
 }

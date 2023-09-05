@@ -24,7 +24,7 @@
 .CnavItem p {
   /* Text/Button Small */
   font-family: "Poppins-Regular" !important;
-  font-size: 9px !important;
+  font-size: 10px !important;
   font-style: normal !important;
   font-weight: 400 !important;
   line-height: 20px !important;
@@ -382,7 +382,7 @@ input[type="checkbox"]:checked::before {
 }
 .ChooseCoverHeaderText {
   color: var(--greyscale-900, #212121);
-  font-size: 13px !important;
+  font-size: 17px !important;
   font-family: "Poppins-Regular" !important;
   font-style: normal;
   font-weight: 600 !important;
@@ -612,6 +612,12 @@ input[type="checkbox"]:checked::before {
   font-weight: 500 !important;
   line-height: 22px !important;
 }
+.step3Text {
+  font-size: 17px !important;
+}
+.step3SpanText {
+  font-size: 17px !important;
+}
 /* Tab view*/
 @media only screen and (min-width: 768px) {
   .CoverBox1 {
@@ -685,6 +691,12 @@ input[type="checkbox"]:checked::before {
   }
   .CnavItem p {
     font-size: 14px !important;
+  }
+  .step3Text {
+    font-size: inherit;
+  }
+  .step3SpanText {
+    font-size: inherit;
   }
 }
 
