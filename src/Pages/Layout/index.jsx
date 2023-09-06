@@ -301,7 +301,7 @@ export default function Layout() {
                 {/* Custom Right button page */}
                 <Box mb={2} className={rightCustomBox ? "customPageBottomBox customPageBottomRCloseBox" : "customPageBottomBox"}>
                   <img onClick={() => setRightCustomBox(!rightCustomBox)} className='leftCustomArrow' src={rightCustomBox ? UpArrow : DownArrow} />
-                  <Box className="customPageBoxHeader">
+                  <Box mb={rightCustomBox ? 5 : 0} className="customPageBoxHeader">
                     <Typography onClick={() => setRightCustomBox(!rightCustomBox)} className='BoxHeaderText'>Bottom right custom option
                       <span className='choseOneSubText'>(choose one)</span>
 
@@ -535,7 +535,7 @@ export default function Layout() {
                 {/* Custom left Button page */}
                 <Box className={leftCustomBox ? "customPageBottomBox customPageBottomLCloseBox" : "customPageBottomBox"}>
                   <img onClick={() => setLeftCustomBox(!leftCustomBox)} className='leftCustomArrow' src={leftCustomBox ? UpArrow : DownArrow} />
-                  <Box className="customPageBoxHeader">
+                  <Box mb={leftCustomBox ? 5 : 0} className="customPageBoxHeader">
                     <Typography onClick={() => setLeftCustomBox(!leftCustomBox)} className='BoxHeaderText'>Bottom left custom option<span className='choseOneSubText'>(choose one)</span></Typography>
                     {/* <Typography className='choseOneSubText'>(choose one)</Typography> */}
                   </Box>
@@ -994,7 +994,7 @@ export default function Layout() {
                 {/* Custom Right button page */}
                 <Box mb={2} className={rightCustomBox ? "customPageBottomBox customPageBottomRCloseBox" : "customPageBottomBox"}>
                   <img onClick={() => setRightCustomBox(!rightCustomBox)} className='leftCustomArrow' src={rightCustomBox ? UpArrow : DownArrow} />
-                  <Box className="customPageBoxHeader">
+                  <Box mb={rightCustomBox ? 5 : 0} className="customPageBoxHeader">
                     <Typography onClick={() => setRightCustomBox(!rightCustomBox)} className='BoxHeaderText'>Bottom right custom option
                       <span className='choseOneSubText'>(choose one)</span>
 
@@ -1685,7 +1685,7 @@ export default function Layout() {
                 {/* Custom Right button page */}
                 <Box mb={2} className={rightCustomBox ? "customPageBottomBox customPageBottomRCloseBox" : "customPageBottomBox"}>
                   <img onClick={() => setRightCustomBox(!rightCustomBox)} className='leftCustomArrow' src={rightCustomBox ? UpArrow : DownArrow} />
-                  <Box className="customPageBoxHeader">
+                  <Box mb={rightCustomBox ? 5 : 0} className="customPageBoxHeader">
                     <Typography onClick={() => setRightCustomBox(!rightCustomBox)} className='BoxHeaderText'>Bottom right custom option
                       <span className='choseOneSubText'>(choose one)</span>
 
