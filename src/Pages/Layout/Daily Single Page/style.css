@@ -8,6 +8,7 @@
 
 /* Daily Single Page */
 .DailySinglePage {
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
@@ -159,9 +160,9 @@
   color: var(--greyscale-900, #212121);
   text-align: justify;
   font-family: "Poppins-Regular" !important;
-  font-size: 16px !important;
+  font-size: 11px !important;
   font-style: normal;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   line-height: 150% !important;
   display: flex;
   align-items: center;
@@ -332,6 +333,10 @@
     width: 60%;
     margin-left: 15px;
     margin-top: 0;
+  }
+  .setTimeInRadioBox p {
+    font-size: 16px !important;
+    font-weight: 500 !important;
   }
 }
 
