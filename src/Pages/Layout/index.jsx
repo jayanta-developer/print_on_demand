@@ -14,7 +14,6 @@ import Calender from "./Calendars";
 export default function Layout() {
   const [tab, setTab] = useState("DailySinglePage");
 
-
   return (
     <>
       <NavBar />
