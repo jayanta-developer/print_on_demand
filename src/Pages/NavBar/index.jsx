@@ -37,7 +37,7 @@ export default function NavBar() {
             <Typography>Add-ins</Typography>
           </Box>
           <Box className="navItem">
-            <Typography>Dates</Typography>
+            <Typography className={url === "/dates" ? "navFont" : null} onClick={() => navigate("/dates")}>Dates</Typography>
           </Box>
           <Box className="navItem">
             <Typography>Review</Typography>

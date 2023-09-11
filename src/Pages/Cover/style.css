@@ -60,9 +60,13 @@
   gap: 10px;
   border-radius: 2px;
   background: var(--primary-ocher, #b8845f);
+  transition: all 0.5s;
 
   /* Button/Shadow 1 */
   box-shadow: 4px 8px 12px 0px rgba(133, 84, 50, 0.2);
+}
+.price_nextBtn:hover {
+  background: #9c7050;
 }
 .price_nextBtn p {
   color: var(--primary-white, #fff);

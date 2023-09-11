@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Typography, Box, Radio } from '@mui/material';
-import "./Daily Single Page/style.css"
-
+import "./Daily Single Page/style.css";
 
 //Component 
 import NavBar from '../NavBar';

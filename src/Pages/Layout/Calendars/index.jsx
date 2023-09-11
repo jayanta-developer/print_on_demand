@@ -19,12 +19,9 @@ export default function CalenderPage() {
   const handleFontBackRadioChange = (event) => {
     setFontBackRadio(event.target.value);
   };
-
   const handelCardRadio = (e) => {
     setTemplateCardRadio(e.target.value);
   }
-
-
   const handelCountDecrease = () => {
     if (pageCount >= 1) {
       setPageCount(pageCount - 1)
@@ -33,8 +30,6 @@ export default function CalenderPage() {
   const handelCountIncrease = () => {
     setPageCount(pageCount + 1)
   }
-
-
 
   const templateCard = (index) => {
     console.log(index);
