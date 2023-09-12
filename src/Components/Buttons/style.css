@@ -1,0 +1,27 @@
+.button {
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  background: var(--primary-ocher, #b8845f);
+  cursor: pointer;
+  /* Button/Shadow 1 */
+  box-shadow: 4px 8px 12px 0px rgba(133, 84, 50, 0.2);
+  transition: all 0.5s;
+  margin: 10px 0;
+}
+.button:hover {
+  background: #9c7050;
+}
+.button p {
+  color: var(--primary-white, #fff);
+  text-align: center;
+
+  /* Text/Button Small */
+  font-family: "Poppins-Regular" !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 20px !important; /* 142.857% */
+}

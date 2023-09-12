@@ -1,16 +1,17 @@
 .datesContainer {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-top: 40px;
+  padding: 0 10px;
+  margin-bottom: 250px;
 }
 .datesSideMenu {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 419px;
-  margin-right: 15px;
 }
 .datesDrop {
   display: flex;
@@ -129,8 +130,7 @@
 .datePickerBox {
 }
 .datesCover {
-  width: 60%;
-  margin-left: 15px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -139,7 +139,7 @@
   padding-left: 50px;
 }
 .StartEndCoverBox {
-  width: 553px;
+  width: 100%;
   height: 325px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -219,7 +219,7 @@
   letter-spacing: -0.26px !important;
 }
 .presetsDropBox {
-  width: 780px;
+  width: 100%;
   height: auto;
   flex-shrink: 0;
   border-radius: 10px;
@@ -241,7 +241,7 @@
 .presetsEventsBox {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 .presetsEventsBox > div {
@@ -280,4 +280,73 @@
   font-style: normal;
   font-weight: 600 !important;
   line-height: 24px !important;
+}
+
+/*update Drop*/
+.uploadContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uploadHeader {
+  color: var(--greyscale-900, #212121);
+  text-align: center;
+  /* Text/H3 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 32px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 132% !important;
+}
+.uploadSubHeader {
+  color: #514f4f;
+  text-align: center;
+
+  /* Body */
+  font-family: "Poppins-Regular" !important;
+  font-size: 13px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+  letter-spacing: -0.26px !important;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .StartEndCoverBox {
+    width: 420px;
+  }
+  .presetsDropBox {
+    width: 420px;
+  }
+  .presetsEventsBox {
+  }
+  .datesContainer {
+    margin-bottom: 520px;
+    flex-direction: row;
+  }
+  .datesSideMenu {
+    width: 419px;
+    margin-right: 15px;
+  }
+  .datesCover {
+    width: 60%;
+    margin-left: 15px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .StartEndCoverBox {
+    width: 553px;
+  }
+  .presetsDropBox {
+    width: 780px;
+  }
+  .presetsEventsBox {
+    flex-direction: row;
+  }
+  .datesContainer {
+    margin-bottom: 250px;
+  }
 }

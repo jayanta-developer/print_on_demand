@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -8,16 +8,21 @@ import "./style.css";
 // icons
 import UpArrow from "../../Assets/images/UpArrow.svg";
 import DownArrow from "../../Assets/images/DownArrow.svg";
+import fileDropIcon from "../../Assets/images/cloud_upload.svg"
 
 
 //Components
 import NavBar from '../NavBar';
 import Footer from '../Footer';
 import PriceBox from "../../Components/PriceBox"
+import ButtonPrimary from '../../Components/Buttons';
 
 export default function Dates() {
-  const [startEndDrop, setStartEndDrop] = useState(false)
-  const [presetsEventsDrop, setPresetsEventsDrop] = useState(true)
+  const [startEndDrop, setStartEndDrop] = useState(true)
+  const [presetsEventsDrop, setPresetsEventsDrop] = useState(false)
+  const [uploadDrop, setUploadDrop] = useState(false)
+  const fileInputRef = useRef(null);
+
 
   const [startDate, setStartDate] = useState("")
   const [endDate, setEndDate] = useState("")
@@ -35,6 +40,14 @@ export default function Dates() {
     setEndDate(date.$d)
   };
 
+  const onTargetClick = () => {
+    fileInputRef.current.click()
+  }
+
+  const onFileInputChange = (event) => {
+    const { files } = event.target;
+  }
+
 
   return (
     <>
@@ -44,7 +57,10 @@ export default function Dates() {
         <Box className="datesSideMenu">
           {/* Start End Drop */}
           <Box sx={{ height: startEndDrop ? "auto" : "62px" }} mb={2.5} className="StartEndDrop datesDrop">
-            <Box mb={2} onClick={() => setStartEndDrop(!startEndDrop)} className="StartEndDropHeader">
+            <Box mb={2} onClick={() => {
+              setStartEndDrop(!startEndDrop)
+              setPresetsEventsDrop(false)
+            }} className="StartEndDropHeader">
               <Typography className="dropBoxHeader" sx={{ color: startEndDrop ? "#1e1d1d" : "#8E8E8E" }}>Start and End Date</Typography>
               <img className="dropBoxNavigateArrow startNavigateArrow" src={startEndDrop ? UpArrow : DownArrow} />
             </Box>
@@ -115,8 +131,11 @@ export default function Dates() {
 
           {/* presets Events Drop */}
           <Box mb={2.5} sx={{ height: presetsEventsDrop ? "auto" : "62px" }} className="presetsDrop datesDrop">
-            <Box mb={2} onClick={() => setPresetsEventsDrop(!presetsEventsDrop)} className="StartEndDropHeader">
-              <Typography className="dropBoxHeader" sx={{ color: presetsEventsDrop ? "#1e1d1d" : "#8E8E8E" }}>Start and End Date</Typography>
+            <Box mb={2} onClick={() => {
+              setPresetsEventsDrop(!presetsEventsDrop)
+              setStartEndDrop(false)
+            }} className="StartEndDropHeader">
+              <Typography className="dropBoxHeader" sx={{ color: presetsEventsDrop ? "#1e1d1d" : "#8E8E8E" }}>Presets Events</Typography>
               <img className="dropBoxNavigateArrow startNavigateArrow" src={presetsEventsDrop ? UpArrow : DownArrow} />
             </Box>
             <Box mt={0.5} className="DropInnerContainer">
@@ -170,14 +189,42 @@ export default function Dates() {
             </Box>
           </Box>
 
-          <Box mb={2.5} className="updateDrop datesDrop"></Box>
+
+          {/*update Drop*/}
+
+          <Box mb={2.5} sx={{ height: uploadDrop ? "auto" : "62px" }} className="updateDrop datesDrop">
+            <Box mb={2} onClick={() => setUploadDrop(!uploadDrop)} className="StartEndDropHeader">
+              <Typography className="dropBoxHeader" sx={{ color: uploadDrop ? "#1e1d1d" : "#8E8E8E" }}>Upload Events</Typography>
+              <img className="dropBoxNavigateArrow startNavigateArrow" src={uploadDrop ? UpArrow : DownArrow} />
+            </Box>
+            <Box mb={2} className="uploadContainer">
+              <Typography mb={3} className='uploadHeader'>Upload Events (Optional)</Typography>
+              <Typography mb={3} className="uploadSubHeader">If you have special events (anniversaries, birthdays) in an online calendar, you can download those dates and upload them into your paper planner (here are three videos – google calendar, outlook calendar, apple calendar – that show  how to download and upload the file). If you don’t have these dates in an online calendar, or if you don’t want to deal with moving files, we recommend skipping this step for your first planner (and save it for the next one if you feel like they were missed).</Typography>
+              <Box onTargetClick={onTargetClick} className="fileDropBox">
+                <input
+                  onChange={onFileInputChange}
+                  ref={fileInputRef}
+                  type="file"
+                  className="hidden"
+                />
+
+                <img onClick={() => fileInputRef.current.click()} className='fileDropIcon' src={fileDropIcon} />
+                <Typography onClick={() => fileInputRef.current.click()} className='fileDropBText'>Drag & Drop</Typography>
+                <Typography onClick={() => fileInputRef.current.click()} className='fileDropSubText'>File that contains your events to start uploading...</Typography>
+
+              </Box>
+            </Box>
+            <ButtonPrimary buttonText="Skip" />
+            <ButtonPrimary buttonText="OR BROWSE COMPUTER TO UPLOAD FILE" />
+
+          </Box>
 
         </Box>
 
         <Box className="datesCover">
           <Box className="ChooseCoverHeader step5CoverHeader">
-            <Typography mr={1} className='ChooseCoverHeaderText step3Text'>Step 5:
-              <span className='ChooseCoverSubText step3SpanText'>Choose Start and Finish Dates</span>
+            <Typography mr={1} className='ChooseCoverHeaderText step3Text'>{startEndDrop ? "Step 5:" : "Step 6:"}
+              <span style={{ marginLeft: "5px" }} className='ChooseCoverSubText step3SpanText'>{startEndDrop ? "Choose Start and Finish Dates" : "Events"}</span>
             </Typography>
           </Box>
 
