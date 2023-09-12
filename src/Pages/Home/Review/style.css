@@ -1,0 +1,99 @@
+.ReviewContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 0 10px;
+}
+.reviewSideMenu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 507px;
+  flex-shrink: 0;
+  background: #fff;
+  padding: 40px 10px;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.reviewHeaderCheck {
+  display: flex;
+  flex-direction: row;
+}
+
+.reviewHeaderText {
+  color: #373636;
+  /* Text/Body 2 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+}
+
+.reviewCover {
+  display: flex;
+  flex-direction: column;
+}
+.reviewHeaderCheck input {
+  max-width: 20px;
+  min-width: 20px;
+  cursor: pointer;
+}
+.ChooseCover_Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.ReviewCoverBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ReviewCoverBox img {
+  width: 100%;
+  height: 100%;
+}
+.slideBox p {
+  color: var(--greyscale-700, #616161);
+  text-align: center;
+  /* Text/Body 2 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .reviewSideMenu {
+    margin-right: 15px;
+    margin-top: 40px;
+    width: 370px;
+    height: 545px;
+    padding: 40px 30px;
+    margin-bottom: 0px;
+  }
+  .reviewCover {
+    margin-left: 15px;
+  }
+  .ReviewContainer {
+    padding: 0 10px;
+    flex-direction: row;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .reviewSideMenu {
+    margin-top: 111px;
+    width: 472px;
+    height: 507px;
+  }
+  .ReviewContainer {
+    padding: 0;
+  }
+}

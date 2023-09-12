@@ -7,6 +7,7 @@ import Register from "./Pages/Home/SignUp";
 import Cover from "./Pages/Cover";
 import Layout from "./Pages/Layout";
 import Dates from "./Pages/DatesPage";
+import Review from "./Pages/Home/Review";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/cover" element={<Cover />} />
         <Route path="/layout" element={<Layout />} />
         <Route path="/dates" element={<Dates />} />
+        <Route path="/review" element={<Review />} />
       </Routes>
     </>
   );

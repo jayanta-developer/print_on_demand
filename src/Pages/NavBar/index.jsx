@@ -40,7 +40,7 @@ export default function NavBar() {
             <Typography className={url === "/dates" ? "navFont" : null} onClick={() => navigate("/dates")}>Dates</Typography>
           </Box>
           <Box className="navItem">
-            <Typography>Review</Typography>
+            <Typography className={url === "/review" ? "navFont" : null} onClick={() => navigate("/review")}>Review</Typography>
           </Box>
           <Box className="navItem">
             <Typography>Gift Card</Typography>
