@@ -1,17 +1,27 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "./style.css";
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, Radio } from '@mui/material';
 import { FileDrop } from 'react-file-drop'
 
 import coverPhoto from "../../Assets/images/CoverPhoto.png";
 import fileDropIcon from "../../Assets/images/cloud_upload.svg"
 import CoverBook from "../../Assets/images/coverBook.png";
 import InsideCoverBinder from "../../Assets/images/insideCoverBinder.png"
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import GTic from "../../Assets/images/GTic.png (1).svg"
+
+//PopUp images
+import image1 from "../../Assets/images/PopUpPhotos/ADL 23__0003_mathilde 3.jpg"
+import image2 from "../../Assets/images/PopUpPhotos/ADL 23__0004_mathilde 2.jpg"
+import image3 from "../../Assets/images/PopUpPhotos/ADL 23__0005_mathilde 1.jpg"
+import image4 from "../../Assets/images/PopUpPhotos/Mathilde Losquin.jpg"
 
 //Component 
 import NavBar from '../NavBar';
 import Footer from '../Footer';
 import PriceBox from '../../Components/PriceBox';
+import PopUpImageSlider from "../../Components/PopUpImageSlider";
+import ButtonPrimary from "../../Components/Buttons"
 
 export default function Cover() {
   const [coverOption, setCoverOption] = useState("Custom");
@@ -19,32 +29,51 @@ export default function Cover() {
   const fileInputRef = useRef(null);
   const [checkbox1, setCheckbox1] = useState(false);
   const [checkbox2, setCheckbox2] = useState(false);
+  const [coverPopUp, setCoverPopUp] = useState(false)
+  const [selectedImg, setSelectedImg] = useState()
+
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-
+  const popUpImages = [image1, image2, image3, image4]
 
   const handleCheckbox1Change = () => {
     setCheckbox1(!checkbox1);
     setCheckbox2(false);
   };
-
   const handleCheckbox2Change = () => {
     setCheckbox2(!checkbox2);
     setCheckbox1(false);
   };
 
-
   const onFileInputChange = (event) => {
     const { files } = event.target;
   }
-
   const onTargetClick = () => {
     fileInputRef.current.click()
   }
+
+
+
+
+  useEffect(() => {
+    const handleDocumentClick = (e) => {
+      if (coverPopUp && !e.target.closest('.coverPopUp') && !e.target.closest('.natureCoverItem img')) {
+        setCoverPopUp(false);
+      }
+    };
+    if (coverPopUp) {
+      document.addEventListener('click', handleDocumentClick);
+    }
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, [coverPopUp]);
+
+
   return (
     <>
       <NavBar />
@@ -102,14 +131,27 @@ export default function Cover() {
 
                 <Box sx={{ display: coverOption === "Nature" ? "flex" : "none" }} className="NatureBox">
                   <Box className="natureCoverItem">
-                    <img src={CoverBook} />
+                    <img style={{ display: selectedImg === 1 ? "block" : "none" }} className='GTic' src={GTic} />
+                    <img onClick={() => {
+                      setCoverPopUp(true)
+                      setSelectedImg(1)
+                    }} src={CoverBook} />
                   </Box>
                   <Box className="natureCoverItem">
-                    <img src={CoverBook} />
+                    <img style={{ display: selectedImg === 2 ? "block" : "none" }} className='GTic' src={GTic} />
+                    <img onClick={() => {
+                      setCoverPopUp(true)
+                      setSelectedImg(2)
+                    }} src={CoverBook} />
                   </Box>
                   <Box className="natureCoverItem">
-                    <img src={CoverBook} />
+                    <img style={{ display: selectedImg === 3 ? "block" : "none" }} className='GTic' src={GTic} />
+                    <img onClick={() => {
+                      setCoverPopUp(true)
+                      setSelectedImg(3)
+                    }} src={CoverBook} />
                   </Box>
+
                   <Box className="natureCoverItem">
                     <img src={CoverBook} />
                   </Box>
@@ -380,6 +422,22 @@ export default function Cover() {
               <Box className="viewCoverBox">
                 <img src={coverPhoto} />
               </Box>
+
+            </Box>
+            {/* cover popup */}
+            <Box sx={{ display: coverPopUp ? "flex" : "none" }} className='coverPopUp'>
+              <CancelOutlinedIcon color="action" onClick={() => setCoverPopUp(false)} className="coverPopUpClose" />
+              <Box className="coverPImageBox">
+                <Box className="coverPSlider">
+                  <PopUpImageSlider images={popUpImages} />
+                </Box>
+                <Box className="coverPInfo">
+                  <Typography mb={1} className="coverPtext">Mathilde Losquin</Typography>
+                  <Typography mb={3} className="coverPtext">$70.00</Typography>
+                  <ButtonPrimary buttonText="CHOOSE THIS COVER" width="206px" textSize="14px" />
+                </Box>
+              </Box>
+
 
             </Box>
 

@@ -426,6 +426,7 @@ input[type="checkbox"]:checked::before {
   height: 127px;
   margin: 9px 7px;
   cursor: pointer;
+  position: relative;
 }
 .natureCoverItem img {
   width: 100%;
@@ -622,6 +623,53 @@ input[type="checkbox"]:checked::before {
 .step3SpanText {
   font-size: 17px !important;
 }
+.coverPopUp {
+  width: 100%;
+  height: 647px;
+  max-width: 1000px;
+  position: fixed;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 9;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  padding: 30px;
+}
+.coverPopUpClose {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.coverPImageBox {
+  display: flex;
+  flex-direction: column;
+}
+.coverPThumbnailBox {
+}
+.coverPInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.coverPtext {
+  font-family: "Cormorant", "Times New Roman", "Times", "Baskerville", "Georgia",
+    "serif";
+  font-size: 26px !important;
+}
+.GTic {
+  width: 20px !important;
+  height: 20px !important;
+  position: absolute !important;
+  top: 0px;
+  right: 0px;
+}
+
 /* Tab view*/
 @media only screen and (min-width: 768px) {
   .CoverBox1 {
@@ -702,6 +750,22 @@ input[type="checkbox"]:checked::before {
   .step3SpanText {
     font-size: inherit;
   }
+  .coverPopUp {
+    width: 60%;
+    min-width: 775px;
+  }
+  .coverPImageBox {
+    display: flex;
+    flex-direction: row;
+  }
+  .coverPtext {
+    font-family: "Cormorant", "Times New Roman", "Times", "Baskerville",
+      "Georgia", "serif";
+    font-size: 33px !important;
+  }
+  .coverPInfo {
+    margin-left: 40px;
+  }
 }
 
 /* Desktop view */
@@ -719,5 +783,11 @@ input[type="checkbox"]:checked::before {
   }
   .st2InsidePage {
     width: 50%;
+  }
+  .coverPopUp {
+    min-width: 775px;
+    height: 647px;
+    max-width: 1000px;
+    min-width: 833px;
   }
 }

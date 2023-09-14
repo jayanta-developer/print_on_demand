@@ -1,0 +1,72 @@
+/* ImageSlider.css */
+
+.image-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 475px; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+}
+
+.image-slider-main {
+  position: relative;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.thumbnail-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  max-width: 75px; /* Adjust the thumbnail size as needed */
+  height: auto;
+  margin: 0 5px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail.active {
+  border-color: #007bff; /* Highlight the active thumbnail */
+}
+
+/* Add any additional styles as needed */
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .thumbnail {
+    max-width: 100px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+}
