@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 // import { Slider } from '@mui/material-next';
 import "./style.css";
 
-
 import coverPhoto from "../../../Assets/images/CoverPhoto.png"
 import coverPhoto1 from "../../../Assets/images/CalenderCover1.png";
 import coverPhoto2 from "../../../Assets/images/CalenderCover2.png";
@@ -51,8 +50,6 @@ export default function Review() {
       <img src={image} />
     )
   }
-
-
   return (
     <>
       <NavBar />
