@@ -95,7 +95,7 @@
 /* Desktop view */
 @media only screen and (min-width: 1000px) {
   .customizeContainer {
-    width: 80%;
+    width: 90%;
   }
   .customizeCardText {
     padding: 0;

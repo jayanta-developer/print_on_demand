@@ -162,7 +162,7 @@
 /* Desktop view */
 @media only screen and (min-width: 1000px) {
   .storiesContainer {
-    width: 80%;
+    width: 90%;
   }
   .buttonBox {
     right: 230px;

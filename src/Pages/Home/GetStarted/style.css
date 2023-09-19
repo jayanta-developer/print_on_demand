@@ -82,7 +82,7 @@
 /* Desktop view */
 @media only screen and (min-width: 1000px) {
   .getStartedContainer {
-    width: 80%;
+    width: 92%;
   }
   .coverCardBox {
     overflow: inherit;
