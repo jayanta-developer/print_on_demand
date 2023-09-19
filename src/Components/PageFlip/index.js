@@ -1,6 +1,5 @@
 import React from "react";
 import HTMLFlipBook from "react-pageflip";
-
 import "./style.css";
 
 import coverPhoto from "../../Assets/images/CoverPhoto.png";

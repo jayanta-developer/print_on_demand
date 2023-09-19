@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Typography, Box, Slider } from '@mui/material';
 import { Link } from 'react-router-dom';
 // import { Slider } from '@mui/material-next';
@@ -15,12 +15,13 @@ import NavBar from '../../NavBar';
 import Footer from '../../Footer';
 import PriceBox from '../../../Components/PriceBox';
 import BookFlipper from "../../../Components/PageFlip"
+import ButtonPrimary from "../../../Components/Buttons"
 
 
 export default function Review() {
   const [isChecked, setIsChecked] = useState(false);
   const [sliderValue, setSliderValue] = useState(0);
-  const ref = useRef()
+  const [fullView, setFullView] = useState(false)
 
   const handleSliderChange = (event, newValue) => {
     setSliderValue(newValue);
@@ -59,7 +60,7 @@ export default function Review() {
     <>
       <NavBar />
       <Box className="ReviewContainer">
-        <Box className="reviewSideMenu">
+        <Box className={fullView ? "reviewSideMenu" : "reviewSideMenu reviewSideMenuActive"}>
           <Box className="reviewHeaderCheck">
             <input
               onClick={handleCheckboxChange}
@@ -79,6 +80,9 @@ export default function Review() {
         </Box>
 
         <Box className="reviewCover">
+          <Box className="sideButton">
+            <ButtonPrimary width="100px" buttonText="Full view" handelClick={() => setFullView(!fullView)} />
+          </Box>
           <Box className="ChooseCover_Header">
             <Typography mr={1} className='ChooseCoverHeaderText'>Step 6:</Typography>
             <Typography className='ChooseCoverSubText'>Review</Typography>

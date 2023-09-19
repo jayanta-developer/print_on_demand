@@ -1,7 +1,7 @@
 .ReviewContainer {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   margin-top: 18px;
   padding: 0 10px;
@@ -9,13 +9,19 @@
 .reviewSideMenu {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 0px;
   height: 507px;
   flex-shrink: 0;
   background: #fff;
-  padding: 40px 10px;
+  /* padding: 40px 10px; */
   margin-bottom: 30px;
+  transition: all 0.3s;
+  overflow: hidden;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.reviewSideMenuActive {
+  width: 100%;
+  padding: 40px 10px;
 }
 .reviewHeaderCheck {
   display: flex;
@@ -66,23 +72,28 @@
   font-weight: 500 !important;
   line-height: 150% !important;
 }
-
+.reviewCover {
+}
 /* Tab view*/
 @media only screen and (min-width: 768px) {
   .reviewSideMenu {
     margin-right: 15px;
-    margin-top: 40px;
-    width: 370px;
+    margin-top: 140px;
+    width: 0px;
     height: 545px;
-    padding: 40px 30px;
     margin-bottom: 0px;
+  }
+  .reviewSideMenuActive {
+    width: 372px;
+    padding: 40px 10px;
   }
   .reviewCover {
     margin-left: 15px;
+    width: 60%;
   }
   .ReviewContainer {
     padding: 0 10px;
-    flex-direction: column-reverse;
+    flex-direction: row;
   }
 }
 
@@ -90,8 +101,12 @@
 @media only screen and (min-width: 1000px) {
   .reviewSideMenu {
     margin-top: 111px;
-    width: 472px;
     height: 507px;
+    padding: 0px;
+  }
+  .reviewSideMenuActive {
+    width: 472px;
+    padding: 40px 30px;
   }
   .ReviewContainer {
     padding: 0;
