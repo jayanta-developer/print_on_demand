@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Typography, Box, Slider } from '@mui/material';
 import { Link } from 'react-router-dom';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 // import { Slider } from '@mui/material-next';
 import "./style.css";
 
@@ -19,6 +21,8 @@ import ButtonPrimary from "../../../Components/Buttons"
 
 
 export default function Review() {
+  // const [Xval, setXval] = useState('');
+  // const [Yval, setYval] = useState('');
   const [isChecked, setIsChecked] = useState(false);
   const [sliderValue, setSliderValue] = useState(0);
   const [fullView, setFullView] = useState(false)
@@ -56,6 +60,34 @@ export default function Review() {
     )
   }
 
+
+
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.matchMedia('(min-width: 1000px)').matches) {
+  //       setXval('0');
+  //       setYval('0');
+  //     } else if (window.matchMedia('(min-width: 768px)').matches) {
+  //       setXval('300');
+  //       setYval('100');
+  //     } else {
+  //       setXval("300");
+  //       setYval("250");
+  //     }
+  //   };
+
+  //   // Initial setup
+  //   handleResize();
+
+  //   // Attach the event listener
+  //   window.addEventListener('resize', handleResize);
+
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
+
   return (
     <>
       <NavBar />
@@ -80,9 +112,9 @@ export default function Review() {
         </Box>
 
         <Box className="reviewCover">
-          <Box className="sideButton">
-            <ButtonPrimary width="100px" buttonText="Full view" handelClick={() => setFullView(!fullView)} />
-          </Box>
+          {fullView ?
+            <KeyboardArrowRightIcon fontSize="large" className='sideButton' onClick={() => setFullView(false)} /> :
+            <KeyboardArrowLeftIcon fontSize="large" className='sideButton' onClick={() => setFullView(true)} />}
           <Box className="ChooseCover_Header">
             <Typography mr={1} className='ChooseCoverHeaderText'>Step 6:</Typography>
             <Typography className='ChooseCoverSubText'>Review</Typography>
@@ -106,7 +138,7 @@ export default function Review() {
             <Typography>Showing Cover{sliderValue}</Typography>
           </Box>
         </Box>
-        <PriceBox />
+        <PriceBox buttonText="Add to cart" Xval="480" Yval="280" />
       </Box>
       <Footer />
     </>

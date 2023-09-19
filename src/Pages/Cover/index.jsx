@@ -497,7 +497,7 @@ export default function Cover() {
 
             </Box>
           </Box>
-          {<PriceBox />}
+          {<PriceBox Xval="360" Yval="550" />}
         </Box>
       </Box >
       <Footer />

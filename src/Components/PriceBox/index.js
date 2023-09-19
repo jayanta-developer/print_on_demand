@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Box } from "@mui/material";
 import rightArrow from "../../Assets/images/arrow_forward.svg";
 
-export default function PriceBox({ setTab }) {
+export default function PriceBox({ setTab, buttonText, Xval, Yval }) {
+  const [x, setX] = useState(window.innerWidth - Xval);
+  const [y, setY] = useState(window.innerHeight - Yval);
+
+  function handleMouseDown(e) {
+    // Calculate the initial position of the mouse relative to the popup box
+    const offsetX = e.clientX - x;
+    const offsetY = e.clientY - y;
+
+    // Attach mouse move and mouse up event listeners
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+
+    function handleMouseMove(e) {
+      // Update the position of the popup box based on mouse movement
+      setX(e.clientX - offsetX);
+      setY(e.clientY - offsetY);
+    }
+
+    function handleMouseUp() {
+      // Remove the event listeners when the user releases the mouse button
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    }
+  }
+
   return (
     <>
-      <Box className="priceHoverBox">
+      <Box
+        sx={{ left: x, top: y }}
+        onMouseDown={handleMouseDown}
+        className="priceHoverBox draggable-popup"
+      >
         <Box className="priceInfo">
           <Box className="priceInfo1">
             <Box className="priceInfo1Sub">
@@ -24,7 +53,7 @@ export default function PriceBox({ setTab }) {
           </Box>
         </Box>
         <Box className="price_nextBtn pointer">
-          <Typography mr={0.5}>Next</Typography>
+          <Typography mr={0.5}>{buttonText || "Next"}</Typography>
           <img src={rightArrow} />
         </Box>
       </Box>

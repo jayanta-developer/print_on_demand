@@ -33,7 +33,7 @@ export default function Layout() {
         </Box>
         {tab === "Calendars" ? <Calender /> : null}
         {tab === "DailySinglePage" ? <DailySinglePage /> : null}
-        <PriceBox />
+        <PriceBox Xval="380" Yval="250" />
       </Box>
       <Footer />
     </>

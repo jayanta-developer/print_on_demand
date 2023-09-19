@@ -350,7 +350,7 @@ export default function Dates() {
             </Box>
           </Box>
         </Box>
-        <PriceBox />
+        <PriceBox Xval="380" Yval="250" />
       </Box>
       <Footer />
     </>
