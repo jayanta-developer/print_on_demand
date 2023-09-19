@@ -48,10 +48,11 @@
   padding: 5px 40px;
   background: #fff;
   box-shadow: 0px 4px 60px 0px rgba(4, 6, 15, 0.05);
-  position: absolute;
+  position: fixed;
   cursor: grab;
   right: 0;
   bottom: 0px;
+  top: inherit;
   z-index: 2;
 }
 .price_nextBtn {
@@ -708,6 +709,7 @@ input[type="checkbox"]:checked::before {
     bottom: 78px;
     right: 90px;
     padding: 30px 40px;
+    position: absolute;
   }
   .priceInfo1 {
     padding-bottom: 15px;
