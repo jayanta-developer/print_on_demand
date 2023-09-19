@@ -7,22 +7,18 @@ export default function PriceBox({ setTab, buttonText, Xval, Yval }) {
   const [y, setY] = useState(window.innerHeight - Yval);
 
   function handleMouseDown(e) {
-    // Calculate the initial position of the mouse relative to the popup box
     const offsetX = e.clientX - x;
     const offsetY = e.clientY - y;
 
-    // Attach mouse move and mouse up event listeners
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);
 
     function handleMouseMove(e) {
-      // Update the position of the popup box based on mouse movement
       setX(e.clientX - offsetX);
       setY(e.clientY - offsetY);
     }
 
     function handleMouseUp() {
-      // Remove the event listeners when the user releases the mouse button
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);
     }

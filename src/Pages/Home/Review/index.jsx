@@ -61,32 +61,28 @@ export default function Review() {
   }
 
 
+  let Xval;
+  let Yval;
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.matchMedia('(min-width: 1000px)').matches) {
+        Xval = '480'
+        Yval = '280'
+      } else if (window.matchMedia('(min-width: 768px)').matches) {
+        Xval = '480'
+        Yval = '280'
+      } else {
+        Xval = '480'
+        Yval = '280'
+      }
+    };
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.matchMedia('(min-width: 1000px)').matches) {
-  //       setXval('0');
-  //       setYval('0');
-  //     } else if (window.matchMedia('(min-width: 768px)').matches) {
-  //       setXval('300');
-  //       setYval('100');
-  //     } else {
-  //       setXval("300");
-  //       setYval("250");
-  //     }
-  //   };
-
-  //   // Initial setup
-  //   handleResize();
-
-  //   // Attach the event listener
-  //   window.addEventListener('resize', handleResize);
-
-  //   // Clean up the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [Xval, Yval]);
 
   return (
     <>
@@ -138,7 +134,8 @@ export default function Review() {
             <Typography>Showing Cover{sliderValue}</Typography>
           </Box>
         </Box>
-        <PriceBox buttonText="Add to cart" Xval="480" Yval="280" />
+        <PriceBox buttonText="Add to cart" Xval='480' Yval='280' />
+        {/* <PriceBox buttonText="Add to cart" Xval={Xval} Yval={Yval} /> */}
       </Box>
       <Footer />
     </>
