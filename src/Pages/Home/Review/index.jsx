@@ -11,6 +11,8 @@ import coverPhoto1 from "../../../Assets/images/CalenderCover1.png";
 import coverPhoto2 from "../../../Assets/images/CalenderCover2.png";
 import coverPhoto3 from "../../../Assets/images/DailySinglePage1 - Copy.png";
 import coverPhoto4 from "../../../Assets/images/DailySinglePage2 - Copy.png";
+import rightArrow from "../../../Assets/images/rightArrow.png"
+import leftArrow from "../../../Assets/images/leftArrow.png"
 
 // Components
 import NavBar from '../../NavBar';
@@ -91,6 +93,7 @@ export default function Review() {
         <Box className={fullView ? "reviewSideMenu" : "reviewSideMenu reviewSideMenuActive"}>
           <Box className="reviewHeaderCheck">
             <input
+              style={{ display: fullView ? "none" : "block" }}
               onClick={handleCheckboxChange}
               checked={isChecked}
               type="checkbox" />
@@ -109,8 +112,14 @@ export default function Review() {
 
         <Box className="reviewCover">
           {fullView ?
-            <KeyboardArrowRightIcon fontSize="large" className='sideButton' onClick={() => setFullView(false)} /> :
-            <KeyboardArrowLeftIcon fontSize="large" className='sideButton' onClick={() => setFullView(true)} />}
+            <Box onClick={() => setFullView(false)} className="sideButton">
+              <img src={rightArrow} />
+            </Box> :
+            <Box onClick={() => setFullView(true)} className="sideButton">
+              <img src={leftArrow} />
+            </Box>
+          }
+
           <Box className="ChooseCover_Header">
             <Typography mr={1} className='ChooseCoverHeaderText'>Step 6:</Typography>
             <Typography className='ChooseCoverSubText'>Review</Typography>

@@ -76,8 +76,20 @@
 .sideButton {
   position: absolute;
   top: 300px;
-  left: 0px;
+  left: -45px;
   cursor: pointer;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sideButton img {
+  width: 100%;
+  height: 100%;
 }
 /* Tab view*/
 @media only screen and (min-width: 768px) {
@@ -108,6 +120,7 @@
     margin-top: 52px;
     height: 507px;
     padding: 0px;
+    width: 15px;
   }
   .reviewSideMenuActive {
     width: 472px;
