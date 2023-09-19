@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Typography, Box, Slider } from '@mui/material';
 import { Link } from 'react-router-dom';
 // import { Slider } from '@mui/material-next';
@@ -14,11 +14,13 @@ import coverPhoto4 from "../../../Assets/images/DailySinglePage2 - Copy.png";
 import NavBar from '../../NavBar';
 import Footer from '../../Footer';
 import PriceBox from '../../../Components/PriceBox';
+import BookFlipper from "../../../Components/PageFlip"
 
 
 export default function Review() {
   const [isChecked, setIsChecked] = useState(false);
   const [sliderValue, setSliderValue] = useState(0);
+  const ref = useRef()
 
   const handleSliderChange = (event, newValue) => {
     setSliderValue(newValue);
@@ -26,6 +28,8 @@ export default function Review() {
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked); // Toggle the checked state
   };
+
+
 
   const handelImages = () => {
     let image;
@@ -50,6 +54,7 @@ export default function Review() {
       <img src={image} />
     )
   }
+
   return (
     <>
       <NavBar />
@@ -80,7 +85,8 @@ export default function Review() {
           </Box>
 
           <Box className="ReviewCoverBox">
-            {handelImages()}
+            {/* {handelImages()} */}
+            <BookFlipper />
           </Box>
           <Box className="slideBox">
             <Slider

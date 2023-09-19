@@ -82,7 +82,7 @@
   }
   .ReviewContainer {
     padding: 0 10px;
-    flex-direction: row;
+    flex-direction: column-reverse;
   }
 }
 
