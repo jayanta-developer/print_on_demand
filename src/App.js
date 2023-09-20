@@ -10,6 +10,7 @@ import Dates from "./Pages/DatesPage";
 import Review from "./Pages/Home/Review";
 import Cart from "./Pages/Cart";
 import ShippingInfo from "./Pages/ShippingInfo";
+import MyAccount from "./Pages/MyAccount";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/review" element={<Review />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/shippingInfo" element={<ShippingInfo />} />
+        <Route path="/account/my-account" element={<MyAccount />} />
       </Routes>
     </>
   );
