@@ -1,0 +1,164 @@
+.shippingInfoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shipInputBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.paymentSummeryBox {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid #dddddd;
+  padding-top: 20px;
+  margin-top: 44px;
+}
+.paymentSummeryItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.paymentSummeryText {
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 18px !important;
+}
+.paymentSummeryTotalText {
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 18px !important;
+}
+.couponCodeBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.couponCodeBox input {
+  width: 202px;
+}
+.couponButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 105px;
+  height: 56px;
+  border: 1px solid #b8845f;
+  background: #fff;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.couponButton:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.couponButton p {
+  color: #b8845f;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 15px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  letter-spacing: 1.35px !important;
+}
+.cartSubHeaderShipping {
+  margin-bottom: 8px !important;
+}
+.shipInputDropBox {
+  width: 100%;
+  position: relative;
+}
+.StateDropArrow {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  cursor: pointer;
+}
+.cityDropArrow {
+  position: absolute;
+  top: 14px;
+  right: 130px;
+  cursor: pointer;
+}
+.stateDrop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  overflow: hidden;
+  transition: all 0.5s;
+  position: absolute;
+  top: 58px;
+  z-index: 9;
+}
+.stateDropItem {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px rgba(192, 192, 192, 0.466) solid;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.stateDropItem:hover {
+  background: #eeeeee;
+}
+.Ffour {
+  width: 174px;
+}
+.cityInput {
+  width: 84px;
+}
+.stateInput {
+  width: 355px;
+}
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .cartProductImg img {
+    margin-bottom: 13px;
+  }
+  .cartBox {
+    width: 530px;
+  }
+  .couponButton {
+    width: 160px;
+  }
+  .couponCodeBox input {
+    width: 260px;
+  }
+  .cityDropArrow {
+    right: 130px;
+  }
+  .Ffour {
+    width: 223px;
+  }
+  .cityInput {
+    width: 100px;
+  }
+  .stateInput {
+    width: 470px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+}

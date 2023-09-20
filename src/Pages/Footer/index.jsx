@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 import "./style.css"
 
 import CompanyBanner from "../../Assets/images/BYBnewtag(white).png"
@@ -11,6 +12,7 @@ import FacebookIcon from "../../Assets/images/Facebook.svg"
 import sendArrowIcon from "../../Assets/images/sendArrowIcon.svg"
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <>
       <Box className="Footer">
@@ -50,7 +52,7 @@ export default function Footer() {
 
           <Box className="footerItemBox">
             <Box className="footerItemSubBox">
-              <Typography>Shipping / Returns</Typography>
+              <Typography onClick={() => navigate("/shippingInfo")}>Shipping / Returns</Typography>
             </Box>
             <Box className="footerItemSubBox">
               <Typography>Privacy policy</Typography>
