@@ -8,6 +8,12 @@
   src: url("./Assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+}
+
 .poppins {
   font-family: "Poppins-Regular" !important;
 }

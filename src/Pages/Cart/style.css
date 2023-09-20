@@ -42,7 +42,7 @@
 .cartHeaderSubtotal {
   color: #b8845f;
   text-align: center;
-  font-family: "Poppins-Regular" !important;
+  font-family: "Montserrat" !important;
   font-size: 16px !important;
   font-style: normal;
   font-weight: 600 !important;
@@ -52,7 +52,7 @@
 .cartSubHeader {
   color: #848383;
   text-align: center;
-  font-family: "Poppins-Regular" !important;
+  font-family: "Montserrat" !important;
   font-size: 14px !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -101,7 +101,7 @@
 .cartProductImg p {
   color: #000;
   text-align: center;
-  font-family: "Poppins-Regular" !important;
+  font-family: "Montserrat" !important;
   font-size: 15px !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -120,7 +120,7 @@
 .cartProductCountBtn p {
   color: #4b4b4b;
   text-align: center;
-  font-family: "Poppins-Regular" !important;
+  font-family: "Montserrat" !important;
   font-size: 13px !important;
   font-style: normal;
   font-weight: 700 !important;
@@ -130,7 +130,7 @@
 .cartProductPrice p {
   color: #4b4b4b;
   text-align: center;
-  font-family: "Poppins-Regular" !important;
+  font-family: "Montserrat" !important;
   font-size: 13px !important;
   font-style: normal;
   font-weight: 600 !important;
