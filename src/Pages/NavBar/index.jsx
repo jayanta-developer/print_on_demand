@@ -46,7 +46,7 @@ export default function NavBar() {
             <Typography>Gift Card</Typography>
           </Box>
           <Box className="navItem">
-            <Typography>Cart</Typography>
+            <Typography className={url === "/cart" ? "navFont" : null} onClick={() => navigate("/cart")}>Cart</Typography>
           </Box>
         </Box>
       </Box>
