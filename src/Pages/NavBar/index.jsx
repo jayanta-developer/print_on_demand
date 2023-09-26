@@ -7,7 +7,7 @@ import "./style.css"
 import NavHeaderImg from "../../Assets/images/BYBnewtag(white).png"
 import navScrollBtn from "../../Assets/images/scroll-svgrepo-com.svg"
 
-import ButtonPrimary from "../../Components/Buttons"
+import { ButtonPrimary } from "../../Components/Buttons"
 
 export default function NavBar() {
   const navigate = useNavigate();
@@ -56,7 +56,7 @@ export default function NavBar() {
             <Typography className={url === "/layout" ? "navFont" : null} onClick={() => navigate("/layout")}>Layout</Typography>
           </Box>
           <Box className="navItem">
-            <Typography>Add-ins</Typography>
+            <Typography className={url === "/addIns" ? "navFont" : null} onClick={() => navigate("/addIns")}>Add-ins</Typography>
           </Box>
           <Box className="navItem">
             <Typography className={url === "/dates" ? "navFont" : null} onClick={() => navigate("/dates")}>Dates</Typography>

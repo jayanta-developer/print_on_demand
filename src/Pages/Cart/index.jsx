@@ -8,7 +8,7 @@ import productCover from "../../Assets/images/coverBook.png"
 //component
 import NavBar from '../NavBar';
 import Footer from '../Footer';
-import ButtonPrimary from "../../Components/Buttons"
+import { ButtonPrimary } from "../../Components/Buttons"
 
 export default function Cart() {
   const [pageCount, setPageCount] = useState(1)

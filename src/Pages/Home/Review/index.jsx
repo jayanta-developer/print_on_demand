@@ -19,7 +19,7 @@ import NavBar from '../../NavBar';
 import Footer from '../../Footer';
 import PriceBox from '../../../Components/PriceBox';
 import BookFlipper from "../../../Components/PageFlip"
-import ButtonPrimary from "../../../Components/Buttons"
+import { ButtonPrimary } from "../../../Components/Buttons"
 
 
 export default function Review() {

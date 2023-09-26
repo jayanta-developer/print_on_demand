@@ -11,6 +11,7 @@ import Review from "./Pages/Home/Review";
 import Cart from "./Pages/Cart";
 import ShippingInfo from "./Pages/ShippingInfo";
 import MyAccount from "./Pages/MyAccount";
+import AddIns from "./Pages/AddIns";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/cover" element={<Cover />} />
         <Route path="/layout" element={<Layout />} />
+        <Route path="/addIns" element={<AddIns />} />
         <Route path="/dates" element={<Dates />} />
         <Route path="/review" element={<Review />} />
         <Route path="/cart" element={<Cart />} />

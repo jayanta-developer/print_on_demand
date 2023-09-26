@@ -15,7 +15,7 @@ import fileDropIcon from "../../Assets/images/cloud_upload.svg"
 import NavBar from '../NavBar';
 import Footer from '../Footer';
 import PriceBox from "../../Components/PriceBox"
-import ButtonPrimary from '../../Components/Buttons';
+import { ButtonPrimary } from '../../Components/Buttons';
 
 export default function Dates() {
   const [startEndDrop, setStartEndDrop] = useState(true)

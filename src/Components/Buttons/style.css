@@ -9,7 +9,7 @@
   /* Button/Shadow 1 */
   box-shadow: 4px 8px 12px 0px rgba(133, 84, 50, 0.2);
   transition: all 0.5s;
-  margin: 10px 0;
+  margin: 10px 8px;
 }
 .button:hover {
   background: #9c7050;
@@ -24,4 +24,11 @@
   font-style: normal;
   font-weight: 500 !important;
   line-height: 20px !important; /* 142.857% */
+}
+
+.SecondaryBtn {
+  background: var(--primary-ocher, #000);
+}
+.SecondaryBtn:hover {
+  background: #252525;
 }

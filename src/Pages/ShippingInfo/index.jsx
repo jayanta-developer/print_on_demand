@@ -8,7 +8,7 @@ import "../../Pages/Cart/style.css"
 //component
 import NavBar from '../NavBar';
 import Footer from '../Footer';
-import ButtonPrimary from "../../Components/Buttons"
+import { ButtonPrimary } from "../../Components/Buttons"
 
 
 export default function ShippingInfo() {

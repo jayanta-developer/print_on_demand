@@ -38,6 +38,7 @@
   line-height: 150% !important;
 }
 .yearTab {
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +90,7 @@
   font-weight: 700 !important;
   line-height: 150% !important;
   text-align: center;
+  margin-bottom: 15px !important;
 }
 .templateBox {
   width: 100%;

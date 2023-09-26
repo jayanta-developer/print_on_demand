@@ -21,7 +21,7 @@ import NavBar from '../NavBar';
 import Footer from '../Footer';
 import PriceBox from '../../Components/PriceBox';
 import PopUpImageSlider from "../../Components/PopUpImageSlider";
-import ButtonPrimary from "../../Components/Buttons"
+import { ButtonPrimary } from "../../Components/Buttons"
 
 export default function Cover() {
   const [coverOption, setCoverOption] = useState("Custom");
