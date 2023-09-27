@@ -1,0 +1,242 @@
+.ShareContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+.ShareHeaderTextBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shareHeder {
+  font-size: 32px !important;
+  color: #000;
+  font-family: "Montserrat" !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 56px !important;
+  margin-bottom: 25px !important;
+}
+.shareSubHeder {
+  font-size: 12px !important;
+  color: #323232;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 132% !important;
+  margin-bottom: 25px !important;
+}
+.shareSubHederTil {
+  color: #323232;
+  font-family: "Montserrat" !important;
+  font-size: 12px !important;
+  font-style: italic;
+  font-weight: 500 !important;
+  line-height: 132% !important;
+  margin-top: 30px !important;
+}
+.ShareHeaderTextBox span {
+  color: #323232;
+  font-family: "Montserrat" !important;
+  font-size: 12px !important;
+  font-style: italic;
+  font-weight: 500 !important;
+  line-height: 132% !important;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+.ShareImageBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  max-width: 1289px;
+}
+.shareImageSubBox {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+.imageBoxLastText {
+  width: 100%;
+  color: #212121;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-size: 23px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 132% !important;
+  margin-top: 74px !important;
+  margin-bottom: 64px !important;
+}
+.BoxImage {
+  width: 100%;
+  height: 100%;
+}
+.imageBox1 {
+  width: 100%;
+}
+.imageBox1R {
+  width: 1000%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.imageBox1RSub {
+  width: 245px;
+  height: 251px;
+  margin: 10px 0;
+}
+
+.ShareVideoBox {
+  width: 100%;
+  background: #f6f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+.ShareVideoBoxHeader {
+  width: 98%;
+
+  color: #000;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-size: 28px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 132% !important;
+  margin-bottom: 30px !important;
+}
+.ShareVideoBoxSubHeader {
+  font-size: 12px !important;
+  width: 98%;
+  color: #323232;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 25px !important;
+  margin-bottom: 24px !important;
+}
+.videoBox {
+  width: 95%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+.videoBox iframe {
+  height: 100%;
+}
+.ShareLastBottomBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ShareLastBottomBoxText {
+  color: #000;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-size: 28px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 132% !important;
+  margin-top: 56px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .ShareContainer {
+    width: 100%;
+    margin-top: 100px;
+    padding: 0;
+  }
+  .shareImageSubBox {
+    flex-direction: column;
+    height: auto;
+  }
+  .shareImageSubBox2 {
+    flex-direction: column-reverse !important;
+  }
+  .imageBox1 {
+    width: 100%;
+  }
+  .imageBox1R {
+    width: 100%;
+  }
+  .imageBox1RSub {
+    width: 315px;
+    margin: 10px 0;
+  }
+  .ShareHeaderTextBox {
+    width: 680px;
+  }
+  .shareHeder {
+    font-size: 42px !important;
+  }
+  .shareSubHeder {
+    font-size: 15px !important;
+  }
+  .ShareHeaderTextBox span {
+    font-size: 15px !important;
+  }
+  .shareSubHederTil {
+    font-size: 15px !important;
+  }
+  .shareSubHederTil span {
+    font-size: 15px !important;
+  }
+  .ShareImageBox {
+    width: 80%;
+  }
+  .ShareVideoBoxSubHeader {
+    width: 80%;
+    font-size: 15px !important;
+  }
+  .ShareVideoBox {
+    padding: 60px 0;
+  }
+  .ShareVideoBoxHeader {
+    width: 80%;
+  }
+  .videoBox {
+    width: 80%;
+    height: 638px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .shareImageSubBox {
+    flex-direction: row;
+    height: 522px;
+  }
+  .shareImageSubBox2 {
+    flex-direction: row !important;
+  }
+  .imageBox1 {
+    width: 40%;
+    margin: 5px;
+  }
+  .imageBox1R {
+    width: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 765px;
+  }
+  .imageBox1RSub {
+    width: 245px;
+    margin: 5px;
+  }
+}

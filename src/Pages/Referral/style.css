@@ -1,0 +1,116 @@
+.referralContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+.referralCoverBox {
+  width: 100%;
+  height: 650px;
+  background-image: url("../../Assets/images/refferCoverf.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+.referInfoBox {
+  width: 100%;
+  height: auto;
+  padding: 10px 5px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.referHeaderText {
+  color: #000;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 132% !important;
+  margin-bottom: 13px !important;
+}
+.referMainHeaderText {
+  color: #000;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 132% !important;
+  margin-bottom: 20px !important;
+}
+.referSunHeaderText {
+  color: #323232;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-size: 15px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 132% !important;
+  margin-bottom: 15px !important;
+}
+.referPText {
+  color: #b8845f;
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 132% !important;
+  margin-bottom: 25px !important;
+}
+.referCheckBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.referBottomBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.referEmailField {
+  width: 100%;
+  margin-bottom: 16px !important;
+}
+.referLastText {
+  color: #4b4b4b;
+  font-family: "Montserrat" !important;
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 18px !important;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .referralCoverBox {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 45px;
+  }
+  .referInfoBox {
+    width: 520px;
+    height: 560px;
+    padding: 40px 60px;
+  }
+  .referralContainer {
+    margin-top: 50px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .referralCoverBox {
+    justify-content: start;
+  }
+}

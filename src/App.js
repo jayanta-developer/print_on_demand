@@ -12,6 +12,8 @@ import Cart from "./Pages/Cart";
 import ShippingInfo from "./Pages/ShippingInfo";
 import MyAccount from "./Pages/MyAccount";
 import AddIns from "./Pages/AddIns";
+import Referral from "./Pages/Referral";
+import ShareStory from "./Pages/ShareStory";
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/shippingInfo" element={<ShippingInfo />} />
         <Route path="/account/my-account" element={<MyAccount />} />
+        <Route path="/referral" element={<Referral />} />
+        <Route path="/shareStory" element={<ShareStory />} />
       </Routes>
     </>
   );
