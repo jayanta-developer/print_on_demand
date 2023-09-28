@@ -54,7 +54,7 @@ export default function ShareStory() {
             <Box className="imageBox1">
               <img className='BoxImage' src={image13} />
             </Box>
-            <Box className="imageBox1R">
+            <Box className="imageBox1R bi1 ">
               <Box className="imageBox1RSub imageBox1RSub-a"><img className='BoxImage' src={image2} /></Box>
               <Box className="imageBox1RSub imageBox1RSub-b"><img className='BoxImage' src={image3} /></Box>
               <Box className="imageBox1RSub imageBox1RSub-c"><img className='BoxImage' src={image4} /></Box>
@@ -66,7 +66,7 @@ export default function ShareStory() {
 
           <Box className="shareImageSubBox shareImageSubBox2">
 
-            <Box className="imageBox1R">
+            <Box className="imageBox1R bi2">
               <Box className="imageBox1RSub imageBox1RSub-a"><img className='BoxImage' src={image2} /></Box>
               <Box className="imageBox1RSub imageBox1RSub-b"><img className='BoxImage' src={image3} /></Box>
               <Box className="imageBox1RSub imageBox1RSub-c"><img className='BoxImage' src={image4} /></Box>
@@ -75,7 +75,7 @@ export default function ShareStory() {
               <Box className="imageBox1RSub imageBox1RSub-f"><img className='BoxImage' src={image7} /></Box>
             </Box>
 
-            <Box className="imageBox1">
+            <Box className="imageBox1 ">
               <img className='BoxImage' src={image1} />
             </Box>
           </Box>

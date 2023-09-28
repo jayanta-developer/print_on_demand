@@ -60,7 +60,7 @@
 .shareImageSubBox {
   display: flex;
   flex-direction: row;
-  height: auto;
+  height: 170px;
 }
 .imageBoxLastText {
   width: 100%;
@@ -79,19 +79,19 @@
   height: 100%;
 }
 .imageBox1 {
-  width: 100%;
+  width: 40%;
+  margin-bottom: 10px;
 }
 .imageBox1R {
-  width: 1000%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .imageBox1RSub {
-  width: 245px;
-  height: 251px;
-  margin: 10px 0;
+  width: 64px;
+  height: 76px;
 }
 
 .ShareVideoBox {
@@ -127,7 +127,7 @@
 }
 .videoBox {
   width: 95%;
-  height: auto;
+  height: 203px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,7 +153,13 @@
   margin-top: 56px !important;
   margin-bottom: 20px !important;
 }
+.bi1 {
+  margin-left: 10px;
+}
 
+.bi2 {
+  margin-right: 10px;
+}
 /* Tab view*/
 @media only screen and (min-width: 768px) {
   .ShareContainer {
@@ -162,21 +168,8 @@
     padding: 0;
   }
   .shareImageSubBox {
-    flex-direction: column;
     height: auto;
-  }
-  .shareImageSubBox2 {
-    flex-direction: column-reverse !important;
-  }
-  .imageBox1 {
-    width: 100%;
-  }
-  .imageBox1R {
-    width: 100%;
-  }
-  .imageBox1RSub {
-    width: 315px;
-    margin: 10px 0;
+    height: 281px;
   }
   .ShareHeaderTextBox {
     width: 680px;
@@ -211,25 +204,24 @@
   }
   .videoBox {
     width: 80%;
-    height: 638px;
+    height: 398px;
+  }
+  .imageBox1RSub {
+    width: 123px;
+    height: 129px;
   }
 }
 
 /* Desktop view */
 @media only screen and (min-width: 1000px) {
   .shareImageSubBox {
-    flex-direction: row;
     height: 522px;
   }
-  .shareImageSubBox2 {
-    flex-direction: row !important;
-  }
+
   .imageBox1 {
-    width: 40%;
     margin: 5px;
   }
   .imageBox1R {
-    width: 60%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -237,6 +229,16 @@
   }
   .imageBox1RSub {
     width: 245px;
+    height: auto;
     margin: 5px;
+  }
+  .bi1 {
+    margin-left: 0px;
+  }
+  .bi2 {
+    margin-right: 0px;
+  }
+  .videoBox {
+    height: 721px;
   }
 }
