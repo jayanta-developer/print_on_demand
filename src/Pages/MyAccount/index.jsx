@@ -62,13 +62,13 @@ export default function MyAccount() {
             <Box className="myAccountSideMenuItem">
               <Typography onClick={() => {
                 setActiveTab("REFERRAL-FRIEND")
+                navigate("/referral")
               }} className={activeTab === "REFERRAL-FRIEND" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>REFERRAL FRIEND</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
               <Typography
                 onClick={() => {
                   setActiveTab("BECOME-AN-AFFILIATE")
-                  navigate("/referral")
                 }}
                 className={activeTab === "BECOME-AN-AFFILIATE" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>BECOME AN AFFILIATE</Typography>
             </Box>

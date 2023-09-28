@@ -32,7 +32,7 @@
   margin: 0;
   padding: 0;
   user-select: none;
-  font-family: "Poppins-Regular";
+  font-family: "Montserrat" !important;
 }
 /* Target the element you want to customize the scroll bar for */
 body {

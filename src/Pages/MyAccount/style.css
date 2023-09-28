@@ -120,6 +120,7 @@
   line-height: 56px !important;
   text-decoration-line: underline;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .myAccountTabSubSpacing p {
   margin-right: 12% !important;

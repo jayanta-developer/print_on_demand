@@ -26,7 +26,7 @@
   color: #000;
   text-align: center;
   font-family: "Montserrat" !important;
-  font-size: 16px !important;
+  font-size: 12px !important;
   font-style: normal;
   font-weight: 500 !important;
   line-height: 132% !important;
@@ -36,7 +36,7 @@
   color: #000;
   text-align: center;
   font-family: "Montserrat" !important;
-  font-size: 24px !important;
+  font-size: 16px !important;
   font-style: normal;
   font-weight: 600 !important;
   line-height: 132% !important;
@@ -46,7 +46,7 @@
   color: #323232;
   text-align: center;
   font-family: "Montserrat" !important;
-  font-size: 15px !important;
+  font-size: 11px !important;
   font-style: normal;
   font-weight: 500 !important;
   line-height: 132% !important;
@@ -56,7 +56,7 @@
   color: #b8845f;
   text-align: center;
   font-family: "Montserrat" !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   font-style: normal;
   font-weight: 600 !important;
   line-height: 132% !important;
@@ -78,12 +78,19 @@
   margin-top: 70px;
 }
 .referEmailField {
-  width: 100%;
+  width: 90%;
   margin-bottom: 16px !important;
 }
 .referLastText {
   color: #4b4b4b;
   font-family: "Montserrat" !important;
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 18px !important;
+}
+.referCheckBox p {
+  color: #4b4b4b;
   font-size: 12px !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -101,10 +108,25 @@
   .referInfoBox {
     width: 520px;
     height: 560px;
-    padding: 40px 60px;
+    padding: 20px 10px;
   }
   .referralContainer {
     margin-top: 50px;
+  }
+  .referHeaderText {
+    font-size: 16px !important;
+  }
+  .referMainHeaderText {
+    font-size: 24px !important;
+  }
+  .referSunHeaderText {
+    font-size: 15px !important;
+  }
+  .referPText {
+    font-size: 16px !important;
+  }
+  .referEmailField {
+    width: 100%;
   }
 }
 

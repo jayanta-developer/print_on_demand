@@ -17,10 +17,7 @@
 .button p {
   color: var(--primary-white, #fff);
   text-align: center;
-
-  /* Text/Button Small */
-  font-family: "Poppins-Regular" !important;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500 !important;
   line-height: 20px !important; /* 142.857% */
@@ -31,4 +28,14 @@
 }
 .SecondaryBtn:hover {
   background: #252525;
+}
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .button p {
+    font-size: 18px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
 }

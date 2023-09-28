@@ -9,7 +9,7 @@ export const ButtonPrimary = ({ buttonText, width, textSize, handelClick }) => {
       sx={{ width: width || "100%" }}
       className="button"
     >
-      <p style={{ fontSize: textSize || "18px" }}>{buttonText}</p>
+      <p style={{ fontSize: textSize }}>{buttonText}</p>
     </Box>
   );
 };
@@ -26,7 +26,7 @@ export const ButtonSecondary = ({
       sx={{ width: width || "100%" }}
       className="button SecondaryBtn"
     >
-      <p style={{ fontSize: textSize || "18px" }}>{buttonText}</p>
+      <p style={{ fontSize: textSize }}>{buttonText}</p>
     </Box>
   );
 };
