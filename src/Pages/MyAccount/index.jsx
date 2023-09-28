@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
+
 
 //component
 import NavBar from "../NavBar";
@@ -9,6 +11,8 @@ import Footer from "../Footer";
 
 
 export default function MyAccount() {
+  const navigate = useNavigate()
+  const [activeTab, setActiveTab] = useState("MY-ACCOUNT")
   return (
     <>
       <NavBar />
@@ -29,31 +33,59 @@ export default function MyAccount() {
           <Box className="myAccountSideMenu">
 
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">MY ACCOUNT</Typography>
+              <Typography onClick={() => {
+                setActiveTab("MY-ACCOUNT")
+              }} className={activeTab === "MY-ACCOUNT" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>MY ACCOUNT</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">MY DESIGNS</Typography>
+              <Typography onClick={() => {
+                setActiveTab("MY-DESIGNS")
+
+              }} className={activeTab === "MY-DESIGNS" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>MY DESIGNS</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">ORDERS</Typography>
+              <Typography onClick={() => {
+                setActiveTab("ORDERS")
+              }}
+                className={activeTab === "ORDERS" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>ORDERS</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">MY INFORMATION (NAME, ADDRESS, PHONE, EMAIL, PASSWORD)</Typography>
+              <Typography onClick={() => {
+                setActiveTab("MY-INFORMATION")
+              }} className={activeTab === "MY-INFORMATION" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>MY INFORMATION (NAME, ADDRESS, PHONE, EMAIL, PASSWORD)</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">EMAIL PREFERENCES</Typography>
+              <Typography onClick={() => {
+                setActiveTab("EMAIL-PREFERENCES")
+              }} className={activeTab === "EMAIL-PREFERENCES" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>EMAIL PREFERENCES</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">REFERRAL FRIEND</Typography>
+              <Typography onClick={() => {
+                setActiveTab("REFERRAL-FRIEND")
+              }} className={activeTab === "REFERRAL-FRIEND" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>REFERRAL FRIEND</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">BECOME AN AFFILIATE</Typography>
+              <Typography
+                onClick={() => {
+                  setActiveTab("BECOME-AN-AFFILIATE")
+                  navigate("/referral")
+                }}
+                className={activeTab === "BECOME-AN-AFFILIATE" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>BECOME AN AFFILIATE</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">SHARE YOUR STORY</Typography>
+              <Typography
+                onClick={() => {
+                  setActiveTab("SHARE-YOUR-STORY")
+                  navigate("/shareStory")
+                }}
+                className={activeTab === "SHARE-YOUR-STORY" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>SHARE YOUR STORY</Typography>
             </Box>
             <Box className="myAccountSideMenuItem">
-              <Typography className="myAccountSideMenuItemText">LOGOUT</Typography>
+              <Typography
+                onClick={() => {
+                  setActiveTab("LOGOUT")
+                }}
+                className={activeTab === "LOGOUT" ? "myAccountSideMenuItemText activeTabText" : "myAccountSideMenuItemText"}>LOGOUT</Typography>
             </Box>
 
           </Box>

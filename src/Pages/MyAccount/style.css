@@ -1,6 +1,6 @@
 .myAccountContainer {
   width: 100%;
-  padding: 62px 70px 0px 70px;
+  padding: 30px 10px 0px 10px;
 }
 .myAccountHeader {
   width: 100%;
@@ -33,7 +33,7 @@
   flex-direction: row;
 }
 .myAccountSideMenu {
-  width: 311px;
+  width: 150px;
   display: flex;
   flex-direction: column;
 }
@@ -46,12 +46,16 @@
 }
 .myAccountSideMenuItemText {
   color: #636363;
-  font-family: "Montserrat";
-  font-size: 15px;
+  font-family: "Montserrat" !important;
+  font-size: 10px !important;
   font-style: normal;
-  font-weight: 400;
-  line-height: 56px; /* 373.333% */
+  font-weight: 400 !important;
+  line-height: 20px !important;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.activeTabText {
+  color: #b8845f !important;
 }
 .myAccountDetailsBox {
   width: 100%;
@@ -63,15 +67,16 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 25px;
+  padding-left: 8px;
 }
 .myAccountTabItem {
   width: 100%;
-  height: 64px;
+  height: 40px;
   border-bottom: 1px solid #e1e1e1;
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
 }
 .myAccountTabItem2 {
   width: 100%;
@@ -83,7 +88,7 @@
 .myAccountTabHeader {
   color: #000;
   font-family: "Montserrat";
-  font-size: 19px !important;
+  font-size: 12px !important;
   font-style: normal;
   font-weight: 600 !important;
   line-height: 24px !important;
@@ -91,7 +96,7 @@
 .myAccountTabSubHeader {
   color: #000;
   font-family: "Montserrat";
-  font-size: 12px !important;
+  font-size: 7px !important;
   font-style: normal;
   font-weight: 400 !important;
   line-height: 56px !important;
@@ -100,7 +105,7 @@
 .myAccountTabSubHeaderEmail {
   color: #000;
   font-family: "Montserrat";
-  font-size: 12px !important;
+  font-size: 10px !important;
   font-style: normal;
   font-weight: 400 !important;
   line-height: 26px !important;
@@ -109,7 +114,7 @@
 .myAccountTabLinkText {
   color: #b8845f;
   font-family: "Montserrat";
-  font-size: 13px !important;
+  font-size: 6px !important;
   font-style: normal;
   font-weight: 400 !important;
   line-height: 56px !important;
@@ -119,9 +124,9 @@
 .myAccountTabSubSpacing p {
   margin-right: 12% !important;
 }
-.myAccountTabSubSpacing2 p {
+/* .myAccountTabSubSpacing2 p {
   margin-right: 7% !important;
-}
+} */
 .myAccountTabSubYSpacing2 p {
   margin-right: 7% !important;
 }
@@ -131,13 +136,39 @@
   .myAccountTabSubSpacing2 p {
     margin-right: 3% !important;
   }
+  .myAccountContainer {
+    padding: 62px 70px 0px 70px;
+  }
+  .myAccountSideMenuItemText {
+    font-size: 15px !important;
+    font-weight: 400 !important;
+  }
+  .myAccountTabHeader {
+    font-size: 19px !important;
+  }
+  .myAccountTab {
+    padding-left: 25px;
+  }
+  .myAccountTabSubHeader {
+    font-size: 12px !important;
+  }
+  .myAccountTabLinkText {
+    font-size: 13px !important;
+  }
+  .myAccountSideMenu {
+    width: 311px;
+  }
+  .myAccountTabItem {
+    justify-content: start;
+    height: 64px;
+  }
+  .myAccountTabSubHeaderEmail {
+    font-size: 12px !important;
+  }
 }
 
 /* Desktop view */
 @media only screen and (min-width: 1000px) {
-  .myAccountSideMenu {
-    min-width: 311px;
-  }
   .myAccountTabSubSpacing2 p {
     margin-right: 7% !important;
   }
