@@ -65,7 +65,7 @@ export default function NavBar() {
             <Typography className={url === "/review" ? "navFont" : null} onClick={() => navigate("/review")}>Review</Typography>
           </Box>
           <Box className="navItem">
-            <Typography>Gift Card</Typography>
+            <Typography className={url === "/giftCard" ? "navFont" : null} onClick={() => navigate("/giftCard")}>Gift Card</Typography>
           </Box>
           <Box className="navItem">
             <Typography className={url === "/cart" ? "navFont" : null} onClick={() => navigate("/cart")}>Cart</Typography>

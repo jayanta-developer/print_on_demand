@@ -14,6 +14,7 @@ import MyAccount from "./Pages/MyAccount";
 import AddIns from "./Pages/AddIns";
 import Referral from "./Pages/Referral";
 import ShareStory from "./Pages/ShareStory";
+import GiftCard from "./Pages/GiftCard";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/account/my-account" element={<MyAccount />} />
         <Route path="/referral" element={<Referral />} />
         <Route path="/shareStory" element={<ShareStory />} />
+        <Route path="/giftCard" element={<GiftCard />} />
       </Routes>
     </>
   );

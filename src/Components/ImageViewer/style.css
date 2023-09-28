@@ -1,0 +1,68 @@
+/* App.css */
+
+/* Style for the main image viewer container */
+.image-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Style for the main image display box */
+.image-box {
+  position: relative;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 400px; /* Adjust this value to control the maximum image height */
+  border: 1px solid #ccc;
+}
+
+/* Style for navigation buttons */
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  outline: none;
+  color: black;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+/* Style for the thumbnail gallery */
+.thumbnail-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Style for individual thumbnails */
+.thumbnail {
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail img {
+  width: 100px; /* Adjust this value to control thumbnail width */
+  height: auto;
+}
+
+/* Highlighted thumbnail */
+.thumbnail.highlighted {
+  border-color: #007bff; /* Customize the highlight color as needed */
+}

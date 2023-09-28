@@ -1,0 +1,106 @@
+.giftCardContainer {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.giftCoverBox {
+  width: 40%;
+}
+.giftCardInfoBox {
+  width: 60%;
+  max-width: 584px;
+  display: flex;
+  flex-direction: column;
+}
+.giftHeader {
+  color: #000;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 132% !important;
+  margin-bottom: 18px !important;
+}
+.giftPriceText {
+  color: #b8845f;
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 132% !important;
+  margin-bottom: 18px !important;
+}
+.giftSubHeader {
+  color: #160b02;
+  font-size: 15px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 132% !important;
+  margin-bottom: 21px !important;
+}
+.giftCardPriceBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.giftCardPriceItem {
+  width: 109px;
+  height: 38px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+.giftCardPriceItemActive {
+  background: #b8845f;
+}
+.giftCardPriceText {
+  color: #878787;
+  font-size: 13px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+}
+.giftCardPriceTextActive {
+  color: #fff;
+}
+.GiftInput {
+  width: 100%;
+  margin-bottom: 10px !important;
+}
+.GiftInput input {
+  height: 5px;
+}
+.messageInput {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px rgba(0, 0, 0, 0.23) solid;
+}
+.messageInput::placeholder {
+  font-size: 16px;
+  color: #9e9e9ec9;
+}
+.messageInput:focus {
+  border: #0064c9 2px solid !important;
+  outline: none;
+}
+.messageInput:hover {
+  border: 1px solid;
+}
+.giftCardInfoBox .button {
+  margin: 0;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+}
