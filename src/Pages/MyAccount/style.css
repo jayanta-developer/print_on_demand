@@ -33,9 +33,11 @@
   flex-direction: row;
 }
 .myAccountSideMenu {
-  width: 150px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
 }
 .myAccountSideMenuItem {
   width: 100%;
@@ -68,6 +70,7 @@
   display: flex;
   flex-direction: column;
   padding-left: 8px;
+  position: relative;
 }
 .myAccountTabItem {
   width: 100%;
@@ -131,9 +134,19 @@
 .myAccountTabSubYSpacing2 p {
   margin-right: 7% !important;
 }
+.sideMenuIcon {
+  display: block;
+  position: absolute;
+  left: -14px;
+  top: 49%;
+  z-index: 999 !important;
+}
 
 /* Tab view*/
 @media only screen and (min-width: 768px) {
+  .sideMenuIcon {
+    display: none !important;
+  }
   .myAccountTabSubSpacing2 p {
     margin-right: 3% !important;
   }
@@ -157,7 +170,7 @@
     font-size: 13px !important;
   }
   .myAccountSideMenu {
-    width: 311px;
+    width: 311px !important;
   }
   .myAccountTabItem {
     justify-content: start;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import SwapHorizontalCircleOutlinedIcon from '@mui/icons-material/SwapHorizontalCircleOutlined';
 
 
 //component
@@ -13,6 +14,7 @@ import Footer from "../Footer";
 export default function MyAccount() {
   const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState("MY-ACCOUNT")
+  const [sideMenu, setSideMenu] = useState(false)
   return (
     <>
       <NavBar />
@@ -30,7 +32,7 @@ export default function MyAccount() {
         </Box>
 
         <Box className="myAccountInfoBox">
-          <Box className="myAccountSideMenu">
+          <Box sx={{ width: sideMenu ? "150px" : "0px" }} className="myAccountSideMenu">
 
             <Box className="myAccountSideMenuItem">
               <Typography onClick={() => {
@@ -94,6 +96,7 @@ export default function MyAccount() {
 
             {/* my account info  */}
             <Box className="myAccountTab">
+              <SwapHorizontalCircleOutlinedIcon onClick={() => setSideMenu(!sideMenu)} className="sideMenuIcon" />
               <Box className="myAccountTabItem">
                 <Typography className="myAccountTabHeader">Recent Projects</Typography>
               </Box>
@@ -157,7 +160,7 @@ export default function MyAccount() {
 
 
 
-      </Box>
+      </Box >
       <Footer />
     </>
   );
