@@ -18,7 +18,7 @@ import ImageViewer from "../../Components/ImageViewer"
 export default function GiftCard() {
   const [giftCardPrice, setGiftCardPrice] = useState("25.00")
 
-  const images = [coverBook1, coverBook2, coverBook3, coverBook4, coverBook4]
+  const images = [coverBook1, coverBook2, coverBook3, coverBook4, coverBook5]
 
 
 

@@ -26,20 +26,17 @@ const ImageViewer = ({ images }) => {
           src={images[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
         />
-
-        {/* <button className="prev-button" onClick={handlePrevClick}>
-          Left
-        </button> */}
-
         <Box className="buttonBox">
-          <ArrowBackIosIcon onClick={handlePrevClick} />
+          <ArrowBackIosIcon
+            className="imageSlide_btn"
+            onClick={handlePrevClick}
+          />
 
-          <ArrowForwardIosIcon onClick={handleNextClick} />
+          <ArrowForwardIosIcon
+            className="imageSlide_btn"
+            onClick={handleNextClick}
+          />
         </Box>
-
-        {/* <button className="next-button" onClick={handleNextClick}>
-          Right
-        </button> */}
       </div>
       <div className="thumbnail-box">
         {images.map((image, index) => (
