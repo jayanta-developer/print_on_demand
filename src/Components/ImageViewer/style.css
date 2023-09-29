@@ -65,13 +65,13 @@
 .thumbnail.highlighted {
   border-color: #007bff; /* Customize the highlight color as needed */
 }
-.buttonBox {
+.button_Box {
   width: 360px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
-  top: 0;
+  top: 45%;
   right: -24px;
 }
 .imageSlide_btn {
@@ -80,7 +80,7 @@
 
 /* Tab view*/
 @media only screen and (min-width: 768px) {
-  .buttonBox {
+  .button_Box {
     width: 303px;
     right: -24px;
   }
@@ -88,7 +88,7 @@
 
 /* Desktop view */
 @media only screen and (min-width: 1000px) {
-  .buttonBox {
+  .button_Box {
     width: 422px;
     right: -50px;
   }

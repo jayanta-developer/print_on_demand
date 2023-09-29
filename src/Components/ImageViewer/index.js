@@ -26,7 +26,7 @@ const ImageViewer = ({ images }) => {
           src={images[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
         />
-        <Box className="buttonBox">
+        <Box className="button_Box">
           <ArrowBackIosIcon
             className="imageSlide_btn"
             onClick={handlePrevClick}
