@@ -135,11 +135,22 @@
   margin-right: 7% !important;
 }
 .sideMenuIcon {
+  width: 30px;
+  height: 30px;
   display: block;
   position: absolute;
   left: -14px;
-  top: 49%;
-  z-index: 999 !important;
+  top: 35%;
+  cursor: pointer;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* Tab view*/

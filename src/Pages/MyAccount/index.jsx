@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-import SwapHorizontalCircleOutlinedIcon from '@mui/icons-material/SwapHorizontalCircleOutlined';
+import rightArrow from "../../Assets/images/rightArrow.png"
+import leftArrow from "../../Assets/images/leftArrow.png"
 
 
 //component
@@ -96,7 +97,9 @@ export default function MyAccount() {
 
             {/* my account info  */}
             <Box className="myAccountTab">
-              <SwapHorizontalCircleOutlinedIcon onClick={() => setSideMenu(!sideMenu)} className="sideMenuIcon" />
+              <Box onClick={() => setSideMenu(!sideMenu)} className="sideMenuIcon">
+                <img src={sideMenu ? leftArrow : rightArrow} />
+              </Box>
               <Box className="myAccountTabItem">
                 <Typography className="myAccountTabHeader">Recent Projects</Typography>
               </Box>
