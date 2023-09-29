@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./style.css";
+import { Box } from "@mui/material";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const ImageViewer = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -24,12 +27,19 @@ const ImageViewer = ({ images }) => {
           alt={`Image ${currentImageIndex + 1}`}
         />
 
-        <button className="prev-button" onClick={handlePrevClick}>
+        {/* <button className="prev-button" onClick={handlePrevClick}>
           Left
-        </button>
-        <button className="next-button" onClick={handleNextClick}>
+        </button> */}
+
+        <Box className="buttonBox">
+          <ArrowBackIosIcon onClick={handlePrevClick} />
+
+          <ArrowForwardIosIcon onClick={handleNextClick} />
+        </Box>
+
+        {/* <button className="next-button" onClick={handleNextClick}>
           Right
-        </button>
+        </button> */}
       </div>
       <div className="thumbnail-box">
         {images.map((image, index) => (

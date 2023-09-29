@@ -58,11 +58,28 @@
 }
 
 .thumbnail img {
-  width: 100px; /* Adjust this value to control thumbnail width */
+  width: 100%; /* Adjust this value to control thumbnail width */
   height: auto;
 }
 
 /* Highlighted thumbnail */
 .thumbnail.highlighted {
   border-color: #007bff; /* Customize the highlight color as needed */
+}
+.buttonBox {
+  width: 86%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 16px;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
 }
