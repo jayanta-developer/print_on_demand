@@ -14,44 +14,54 @@ import coverPhoto8 from "../../Assets/images/Pages/The Strange Visitor by Shreey
 import coverPhoto9 from "../../Assets/images/Pages/highschool-essay.gif";
 import coverPhoto10 from "../../Assets/images/Pages/largepreview.png";
 import coverPhoto11 from "../../Assets/images/Pages/p01725105109-160701033539-thumbnail.jpg";
+import coverPage1 from "../../Assets/images/Pages/CoverPhoto.png";
+import coverPage2 from "../../Assets/images/Pages/CoverPhoto - Copy.png";
 
-function BookFlipper(props) {
+function BookFlipper({ flipBookRef, goToPreviousPage, goToNextPage }) {
   return (
-    <HTMLFlipBook width={300} height={500}>
-      <div className="demoPage">
-        <img src={coverPhoto11} alt="Page 1" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto10} alt="Page 2" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto9} alt="Page 3" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto8} alt="Page 4" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto7} alt="Page 4" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto6} alt="Page 4" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto5} alt="Page 4" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto4} alt="Page 4" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto3} alt="Page 4" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto2} alt="Page 4" />
-      </div>
-      <div className="demoPage">
-        <img src={coverPhoto1} alt="Page 4" />
-      </div>
-    </HTMLFlipBook>
+    <>
+      <HTMLFlipBook ref={flipBookRef} width={300} height={500}>
+        <div className="demoPage">
+          <img src={coverPhoto11} alt="Page 1" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto10} alt="Page 2" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto9} alt="Page 3" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto8} alt="Page 4" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto7} alt="Page 5" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto6} alt="Page 6" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto5} alt="Page 7" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto4} alt="Page 8" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto3} alt="Page 9" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto2} alt="Page 10" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto1} alt="Page 11" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPhoto11} alt="Page 12" />
+        </div>
+        <div className="demoPage">
+          <img src={coverPage2} alt="Page 13" />
+        </div>
+      </HTMLFlipBook>
+    </>
   );
 }
 

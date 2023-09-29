@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Typography, Box, Slider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -29,11 +29,27 @@ export default function Review() {
   const [sliderValue, setSliderValue] = useState(0);
   const [fullView, setFullView] = useState(false)
 
-  const handleSliderChange = (event, newValue) => {
+  let currentPage; const handleSliderChange = (event, newValue) => {
     setSliderValue(newValue);
   };
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked); // Toggle the checked state
+  };
+
+  const flipBookRef = useRef(null);
+
+  const goToPreviousPage = () => {
+    if (flipBookRef.current) {
+      flipBookRef.current.pageFlip().flipPrev();
+    }
+    setSliderValue((prevValue) => prevValue - 1);
+  };
+
+  const goToNextPage = () => {
+    if (flipBookRef.current) {
+      flipBookRef.current.pageFlip().flipNext();
+    }
+    setSliderValue((prevValue) => prevValue + 1);
   };
 
 
@@ -127,20 +143,26 @@ export default function Review() {
 
           <Box className="ReviewCoverBox">
             {/* {handelImages()} */}
-            <BookFlipper />
+            <BookFlipper
+              flipBookRef={flipBookRef}
+              goToPreviousPage={goToPreviousPage}
+              goToNextPage={goToNextPage}
+            />
           </Box>
           <Box className="slideBox">
+            <KeyboardArrowLeftIcon className='pageArrow' onClick={goToPreviousPage} />
             <Slider
               disabled={isChecked ? false : true}
               marks
-              max={10}
+              max={13}
               min={0}
               size="medium"
               valueLabelDisplay="auto"
               value={sliderValue}
               onChange={handleSliderChange}
             />
-            <Typography>Showing Cover{sliderValue}</Typography>
+            <KeyboardArrowRightIcon className='pageArrow' onClick={goToNextPage} />
+            {/* <Typography>Showing Cover{sliderValue}</Typography> */}
           </Box>
         </Box>
         <PriceBox buttonText="Add to cart" Xval='480' Yval='280' />

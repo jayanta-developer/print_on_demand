@@ -42,6 +42,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  /* align-items: center; */
 }
 .reviewHeaderCheck input {
   max-width: 20px;
@@ -62,6 +63,18 @@
 .ReviewCoverBox img {
   width: 100%;
   height: 100%;
+}
+.slideBox {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pageArrow {
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer;
+  margin: 0 10px;
 }
 .slideBox p {
   color: var(--greyscale-700, #616161);
