@@ -21,6 +21,7 @@
   font-style: normal;
   font-weight: 500 !important;
   line-height: 20px !important; /* 142.857% */
+  letter-spacing: 1px;
 }
 
 .SecondaryBtn {
