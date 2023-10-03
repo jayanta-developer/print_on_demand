@@ -6,13 +6,27 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 // import { Slider } from '@mui/material-next';
 import "./style.css";
 
-import coverPhoto from "../../../Assets/images/CoverPhoto.png"
+import rightArrow from "../../../Assets/images/rightArrow.png"
+import leftArrow from "../../../Assets/images/leftArrow.png"
+
+// Flipper images
+import coverPhoto from "../../../Assets/images/CoverPhoto.png";
 import coverPhoto1 from "../../../Assets/images/CalenderCover1.png";
 import coverPhoto2 from "../../../Assets/images/CalenderCover2.png";
 import coverPhoto3 from "../../../Assets/images/DailySinglePage1 - Copy.png";
 import coverPhoto4 from "../../../Assets/images/DailySinglePage2 - Copy.png";
-import rightArrow from "../../../Assets/images/rightArrow.png"
-import leftArrow from "../../../Assets/images/leftArrow.png"
+import coverPhoto5 from "../../../Assets/images/Pages/10-160621063452-thumbnail.jpg";
+import coverPhoto6 from "../../../Assets/images/Pages/2ed4a71e1fee3d7805cccdba970e9806--commodore-amiga-a-pen.jpg";
+import coverPhoto7 from "../../../Assets/images/Pages/2ed4a71e1fee3d7805cccdba970e9806.jpg";
+import coverPhoto8 from "../../../Assets/images/Pages/The Strange Visitor by Shreeya 1 - edited.webp";
+import coverPhoto9 from "../../../Assets/images/Pages/highschool-essay.gif";
+import coverPhoto10 from "../../../Assets/images/Pages/largepreview.png";
+import coverPhoto11 from "../../../Assets/images/Pages/p01725105109-160701033539-thumbnail.jpg";
+import coverPhoto12 from "../../../Assets/images/Pages/CoverPhoto - Copy.png"
+import coverPhoto13 from "../../../Assets/images/Pages/largepreview - Copy.png"
+
+
+
 
 // Components
 import NavBar from '../../NavBar';
@@ -27,10 +41,15 @@ export default function Review() {
   // const [Yval, setYval] = useState('');
   const [isChecked, setIsChecked] = useState(false);
   const [sliderValue, setSliderValue] = useState(0);
-  const [fullView, setFullView] = useState(false)
+  const [fullView, setFullView] = useState(false);
+  const [prevState, setPrevState] = useState(0)
+
+  // console.log(sliderValue);
+
 
   let currentPage; const handleSliderChange = (event, newValue) => {
     setSliderValue(newValue);
+    detectStateChange(newValue)
   };
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked); // Toggle the checked state
@@ -102,6 +121,39 @@ export default function Review() {
     };
   }, [Xval, Yval]);
 
+  //Flipper images
+  const images = [
+    coverPhoto13,
+    coverPhoto,
+    coverPhoto10,
+    coverPhoto9,
+    coverPhoto8,
+    coverPhoto7,
+    coverPhoto6,
+    coverPhoto5,
+    coverPhoto4,
+    coverPhoto3,
+    coverPhoto2,
+    coverPhoto1,
+    coverPhoto11,
+    coverPhoto2,
+    coverPhoto12
+  ]
+
+  function detectStateChange(newState) {
+    if (newState > prevState) {
+      console.log('increased' + prevState + ' to ' + newState);
+      goToNextPage()
+    } else if (newState < prevState) {
+      console.log('decreased' + prevState + ' to ' + newState);
+      goToPreviousPage()
+    } else {
+      console.log('same ' + newState);
+    }
+    setPrevState(newState)
+  }
+
+
   return (
     <>
       <NavBar />
@@ -147,6 +199,7 @@ export default function Review() {
               flipBookRef={flipBookRef}
               goToPreviousPage={goToPreviousPage}
               goToNextPage={goToNextPage}
+              images={images}
             />
           </Box>
           <Box className="slideBox">
@@ -154,7 +207,7 @@ export default function Review() {
             <Slider
               disabled={isChecked ? false : true}
               marks
-              max={13}
+              max={images?.length / 2 - 0.5}
               min={0}
               size="medium"
               valueLabelDisplay="auto"

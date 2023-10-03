@@ -57,8 +57,9 @@
 }
 .ReviewCoverBox {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  padding-left: 85px;
 }
 .ReviewCoverBox img {
   width: 100%;
