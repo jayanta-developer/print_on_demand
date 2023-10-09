@@ -1,0 +1,21 @@
+.PrivacyPolicyContainer {
+  width: 100%;
+  padding: 0 3%;
+  margin-top: 50px;
+}
+.termNTextPrivacy {
+  margin-bottom: 10px !important;
+  margin-left: 40px !important;
+  font-size: 14px !important;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .PrivacyPolicyContainer {
+    padding: 0 15%;
+  }
+}

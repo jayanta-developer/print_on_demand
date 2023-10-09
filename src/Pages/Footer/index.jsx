@@ -55,10 +55,10 @@ export default function Footer() {
               <Typography onClick={() => navigate("/shippingInfo")}>Shipping / Returns</Typography>
             </Box>
             <Box className="footerItemSubBox">
-              <Typography>Privacy policy</Typography>
+              <Typography onClick={() => navigate("/privacy")}>Privacy policy</Typography>
             </Box>
             <Box className="footerItemSubBox">
-              <Typography>Terms of service</Typography>
+              <Typography onClick={() => navigate("/terms")}>Terms of service</Typography>
             </Box>
           </Box>
 

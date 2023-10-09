@@ -15,6 +15,8 @@ import AddIns from "./Pages/AddIns";
 import Referral from "./Pages/Referral";
 import ShareStory from "./Pages/ShareStory";
 import GiftCard from "./Pages/GiftCard";
+import TermsAndService from "./Pages/TermsAndService";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 export default function App() {
   return (
@@ -33,6 +35,8 @@ export default function App() {
         <Route path="/referral" element={<Referral />} />
         <Route path="/shareStory" element={<ShareStory />} />
         <Route path="/giftCard" element={<GiftCard />} />
+        <Route path="/terms" element={<TermsAndService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
     </>
   );
