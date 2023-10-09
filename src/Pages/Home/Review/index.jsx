@@ -42,9 +42,6 @@ export default function Review() {
   const [sliderValue, setSliderValue] = useState(0);
   const [fullView, setFullView] = useState(false);
   const [prevState, setPrevState] = useState(0)
-  const [viewBinder, setViewBinder] = useState();
-
-
 
 
   let currentPage; const handleSliderChange = (event, newValue) => {
@@ -198,7 +195,6 @@ export default function Review() {
               goToPreviousPage={goToPreviousPage}
               goToNextPage={goToNextPage}
               images={images}
-              viewBinder={viewBinder}
             />
           </Box>
           <Box className="slideBox">

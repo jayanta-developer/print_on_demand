@@ -7,15 +7,11 @@ import coverBinderV2 from "../../Assets/images/cover_binder_v2-removebg-preview.
 
 function BookFlipper({ flipBookRef, images }) {
   const [currentPage, setCurrentPage] = useState(0);
-  const getImageIndex = (index) => {
-    // console.log(images.length, index);
-  };
 
   const handlePageFlip = (e) => {
     // Update the current page number when the user flips to a new page
     setCurrentPage(e.data);
   };
-  console.log(currentPage);
   return (
     <>
       <Box className="reviewCover">
@@ -36,7 +32,6 @@ function BookFlipper({ flipBookRef, images }) {
         >
           {images?.map((el, index) => (
             <div key={index} className="demoPage">
-              {getImageIndex(index)}
               <img src={el} />
             </div>
           ))}
