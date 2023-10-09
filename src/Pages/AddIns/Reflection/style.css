@@ -1,0 +1,122 @@
+.reflectionContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+.reflectionSideMenu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reflHeader {
+  width: 100%;
+  color: var(--greyscale-900, #212121);
+  text-align: center;
+  /* Text/H3 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 19px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 132% !important;
+  margin-bottom: 17px !important;
+}
+.reflSubHeader {
+  color: var(--greyscale-900, #212121);
+  text-align: center;
+  font-family: "Montserrat" !important;
+  font-size: 13px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+  margin-bottom: 24px !important;
+}
+.reflTabHeader {
+  color: #313030;
+  font-family: "Montserrat" !important;
+  font-size: 17px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 150% !important;
+  margin-bottom: 12px !important;
+}
+.yearTab,
+.monthlyTab {
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+/* cover */
+.reflectionCover {
+  width: 100%;
+  margin-top: 30px;
+}
+.reflTemplateHeader {
+  width: 100%;
+  color: #313030;
+  font-family: "Montserrat" !important;
+  font-size: 17px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 150% !important;
+  text-align: start;
+  margin-bottom: 15px !important;
+}
+.reflTemplateBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+  height: 400px;
+  overflow-x: hidden;
+}
+.templateItem img {
+  width: 100%;
+  height: 100%;
+}
+.templateItem {
+  width: 173px;
+  height: 198px;
+  margin: 15px 20px 15px 0;
+}
+.VisionAndGoalBtnBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .reflectionContainer {
+    flex-direction: row;
+  }
+  .reflectionSideMenu {
+    width: 310px;
+    margin-right: 15px;
+  }
+  .reflHeader {
+    text-align: start;
+  }
+  .reflectionCover {
+    width: 60%;
+    margin-left: 15px;
+    margin-top: 0px;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .reflectionSideMenu {
+    width: 419px;
+  }
+  .reflTemplateBox {
+    overflow: inherit;
+    justify-content: space-between;
+    height: auto;
+  }
+  .reflHeader {
+    font-size: 32px !important;
+  }
+}

@@ -1,0 +1,39 @@
+.VisionAndGoalHeader {
+  width: 100%;
+  color: var(--greyscale-900, #212121);
+  text-align: center;
+  /* Text/H3 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 19px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 132% !important;
+  margin-bottom: 17px !important;
+}
+
+.VisionAndGoalRadioBox {
+  width: 100%;
+  padding: 21px 20px 20px 0px;
+}
+.VisionAndGoalBtnBox {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .VisionAndGoalHeader {
+    font-size: 32px !important;
+  }
+  .VisionAndGoalBtnBox {
+    margin-top: 10px;
+    justify-content: start;
+  }
+}
