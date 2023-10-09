@@ -1,0 +1,156 @@
+.ReviewContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 0 10px;
+}
+.reviewSideMenu {
+  display: flex;
+  flex-direction: column;
+  width: 0px;
+  height: 507px;
+  flex-shrink: 0;
+  background: #fff;
+  /* padding: 40px 10px; */
+  margin-bottom: 30px;
+  transition: all 0.3s;
+  overflow: hidden;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.reviewSideMenuActive {
+  width: 100%;
+  padding: 40px 10px;
+}
+.reviewHeaderCheck {
+  display: flex;
+  flex-direction: row;
+}
+
+.reviewHeaderText {
+  color: #373636;
+  /* Text/Body 2 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+}
+
+.reviewCover {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* align-items: center; */
+}
+.reviewHeaderCheck input {
+  max-width: 20px;
+  min-width: 20px;
+  cursor: pointer;
+}
+.ChooseCover_Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.ReviewCoverBox {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+}
+.ReviewCoverBox img {
+  width: 100%;
+  height: 100%;
+}
+.slideBox {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+}
+.pageArrow {
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.slideBox p {
+  color: var(--greyscale-700, #616161);
+  text-align: center;
+  /* Text/Body 2 */
+  font-family: "Poppins-Regular" !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150% !important;
+}
+.sideButton {
+  position: absolute;
+  top: 300px;
+  left: -45px;
+  cursor: pointer;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sideButton img {
+  width: 100%;
+  height: 100%;
+}
+.Review_insideCover_binder {
+  width: 10.3% !important;
+  position: absolute;
+  top: 5px;
+  left: 41%;
+  z-index: 1;
+}
+/* Tab view*/
+@media only screen and (min-width: 768px) {
+  .reviewSideMenu {
+    margin-right: 15px;
+    margin-top: 140px;
+    width: 0px;
+    height: 545px;
+    margin-bottom: 0px;
+  }
+  .reviewSideMenuActive {
+    width: 372px;
+    padding: 40px 10px;
+  }
+  .reviewCover {
+    margin-left: 15px;
+    width: 60%;
+    margin-top: 10px;
+  }
+  .ReviewContainer {
+    padding: 0 10px;
+    flex-direction: row;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .reviewSideMenu {
+    margin-top: 14px;
+    height: 507px;
+    padding: 0px;
+    width: 15px;
+  }
+  .reviewSideMenuActive {
+    width: 419px;
+    padding: 40px 30px;
+  }
+  .ReviewContainer {
+    padding: 0;
+  }
+}

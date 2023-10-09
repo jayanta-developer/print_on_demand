@@ -1,0 +1,10 @@
+.demoPage img {
+  margin: 0 5px;
+}
+.page-title{
+  position: absolute;
+  top: 50%;
+  Left: 50%;
+  Width: 211px;
+  transform: translate(-25%,-50%);
+}
