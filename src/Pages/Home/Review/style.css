@@ -56,10 +56,12 @@
   justify-content: center;
 }
 .ReviewCoverBox {
+  width: 880px;
+  height: 740px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  padding-left: 85px;
+  padding: 0 20px;
 }
 .ReviewCoverBox img {
   width: 100%;
@@ -119,7 +121,7 @@
     padding: 40px 10px;
   }
   .reviewCover {
-    margin-left: 15px;
+    /* margin-left: 15px; */
     width: 60%;
   }
   .ReviewContainer {

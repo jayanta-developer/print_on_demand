@@ -10,7 +10,7 @@ import rightArrow from "../../../Assets/images/rightArrow.png"
 import leftArrow from "../../../Assets/images/leftArrow.png"
 
 // Flipper images
-import coverPhoto from "../../../Assets/images/CoverPhoto.png";
+import coverPhoto from "../../../Assets/images/Pages/CoverPhoto1.png";
 import coverPhoto1 from "../../../Assets/images/CalenderCover1.png";
 import coverPhoto2 from "../../../Assets/images/CalenderCover2.png";
 import coverPhoto3 from "../../../Assets/images/DailySinglePage1 - Copy.png";
@@ -22,8 +22,8 @@ import coverPhoto8 from "../../../Assets/images/Pages/The Strange Visitor by Shr
 import coverPhoto9 from "../../../Assets/images/Pages/highschool-essay.gif";
 import coverPhoto10 from "../../../Assets/images/Pages/largepreview.png";
 import coverPhoto11 from "../../../Assets/images/Pages/p01725105109-160701033539-thumbnail.jpg";
-import coverPhoto12 from "../../../Assets/images/Pages/CoverPhoto - Copy.png"
-import coverPhoto13 from "../../../Assets/images/Pages/largepreview - Copy.png"
+import coverPhoto12 from "../../../Assets/images/Pages/CoverPhoto2.png";
+import coverPhoto13 from "../../../Assets/images/Pages/largepreview - Copy.png";
 
 
 
@@ -37,14 +37,14 @@ import { ButtonPrimary } from "../../../Components/Buttons"
 
 
 export default function Review() {
-  // const [Xval, setXval] = useState('');
-  // const [Yval, setYval] = useState('');
+  const flipBookRef = useRef(null);
   const [isChecked, setIsChecked] = useState(false);
   const [sliderValue, setSliderValue] = useState(0);
   const [fullView, setFullView] = useState(false);
   const [prevState, setPrevState] = useState(0)
+  const [viewBinder, setViewBinder] = useState();
 
-  // console.log(sliderValue);
+
 
 
   let currentPage; const handleSliderChange = (event, newValue) => {
@@ -52,10 +52,9 @@ export default function Review() {
     detectStateChange(newValue)
   };
   const handleCheckboxChange = () => {
-    setIsChecked(!isChecked); // Toggle the checked state
+    setIsChecked(!isChecked);
   };
 
-  const flipBookRef = useRef(null);
 
   const goToPreviousPage = () => {
     if (flipBookRef.current) {
@@ -194,12 +193,12 @@ export default function Review() {
           </Box>
 
           <Box className="ReviewCoverBox">
-            {/* {handelImages()} */}
             <BookFlipper
               flipBookRef={flipBookRef}
               goToPreviousPage={goToPreviousPage}
               goToNextPage={goToNextPage}
               images={images}
+              viewBinder={viewBinder}
             />
           </Box>
           <Box className="slideBox">

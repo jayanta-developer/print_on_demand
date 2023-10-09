@@ -1,3 +1,33 @@
+.reviewCover {
+  width: 100%;
+  height: 87%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.coverPhoto {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.stf__parent {
+  min-width: inherit !important;
+  min-height: inherit !important;
+  width: 100% !important;
+  max-width: inherit !important;
+  display: block;
+  height: 630px;
+}
 .demoPage img {
-  margin: 0 5px;
+  width: 390px;
+  height: 100%;
+}
+.demoPage {
+}
+.coverBinder {
+  position: absolute;
+  width: 100px !important;
+  height: 95% !important;
+  z-index: 99;
 }
